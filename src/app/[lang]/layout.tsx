@@ -33,7 +33,7 @@ export default function RootLayout({
         className={cn(
           geistSans.variable,
           geistMono.variable,
-          "size-full overflow-hidden antialiased"
+          "h-screen overflow-hidden antialiased"
         )}
       >
         {children}

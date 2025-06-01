@@ -1,5 +1,227 @@
 {
   "landing": {
     "hello": "Working on it"
+  },
+  "chartOfAccounts": {
+    "title": "Chart of Accounts",
+    "incomeStatement": {
+      "title": "Income Statement",
+      "netRevenue": {
+        "title": "Net Revenue",
+        "accounts": {
+          "1000": "Sales of goods/services including VAT",
+          "1010": "Sales of goods within the EU",
+          "1015": "Sales of goods to countries outside the EU",
+          "1020": "Sales of services within the EU",
+          "1025": "Sales of services to countries outside the EU",
+          "1030": "Non-VAT-liable sales",
+          "1040": "Adjustments on work in progress",
+          "1050": "Government grants"
+        }
+      },
+      "costOfSales": {
+        "title": "Cost Of Sales",
+        "accounts": {
+          "1100": "Purchases of goods including VAT",
+          "1110": "Purchases of goods within the EU",
+          "1115": "Purchases of goods outside the EU",
+          "1120": "Purchases of services within the EU",
+          "1125": "Purchases of services outside the EU",
+          "1130": "Inventory adjustment",
+          "1135": "Customs duties (goods for resale)",
+          "1140": "Own consumption of goods"
+        }
+      },
+      "costOfLabor": {
+        "title": "Cost of Labor",
+        "accounts": {
+          "1200": "Wages and holiday pay",
+          "1202": "ATP",
+          "1203": "Pensions",
+          "1204": "Company phone benefit",
+          "1205": "Company car benefit",
+          "1206": "Mileage allowance",
+          "1207": "Travel allowance",
+          "1240": "Employer contributions (total payment)",
+          "1250": "Wage refunds and wage subsidies",
+          "1260": "Holiday pay liability adjustment",
+          "1270": "Other personnel costs"
+        }
+      },
+      "sellingExpenses": {
+        "title": "Selling Expenses",
+        "accounts": {
+          "1300": "Representation expenses",
+          "1310": "Advertising",
+          "1320": "Travel expenses",
+          "1330": "Newspapers and periodicals"
+        }
+      },
+      "transportExpenses": {
+        "title": "Transport Expenses",
+        "accounts": {
+          "1400": "Fuel",
+          "1401": "Purchase of EV charging station",
+          "1410": "Vehicle insurance",
+          "1420": "Maintenance",
+          "1430": "Green ownership tax etc.",
+          "1440": "Rental and leasing",
+          "1450": "Car wash and care",
+          "1460": "Parking fees",
+          "1470": "Standard mileage allowances",
+          "1475": "Operating costs, vehicles",
+          "1480": "Company car benefit",
+          "1490": "Private share of vehicle costs"
+        }
+      },
+      "premisesExpenses": {
+        "title": "Premises Expenses",
+        "accounts": {
+          "1600": "Rent (excluding utilities)",
+          "1610": "Utilities (electricity, water, gas, heating, etc.)",
+          "1620": "Property taxes and insurance",
+          "1630": "Premises maintenance"
+        }
+      },
+      "administrativeExpenses": {
+        "title": "Administrative Expenses",
+        "accounts": {
+          "1700": "Office supplies and printing",
+          "1705": "Telephone and internet",
+          "1710": "Company phone benefit / private share",
+          "1715": "Acquisition of small assets",
+          "1716": "Acquisition of small assets in the EU",
+          "1717": "Acquisition of small assets outside the EU",
+          "1718": "Customs duties (non-resale goods)",
+          "1720": "Workwear",
+          "1725": "Professional fees",
+          "1730": "Postage and fees",
+          "1735": "Insurance",
+          "1740": "Books and professional literature",
+          "1745": "Write-offs on receivables",
+          "1750": "Cash discrepancies",
+          "1755": "Maintenance of production equipment",
+          "1760": "Training expenses",
+          "1770": "Purchase of VAT-liable services in the EU (not for resale)",
+          "1775": "Purchase of VAT-liable services outside the EU (not for resale)"
+        }
+      },
+      "taxDepreciation": {
+        "title": "Tax Depreciation",
+        "accounts": {
+          "2000": "Depreciation of assets and fixtures",
+          "2010": "Depreciation of mixed-use assets",
+          "2015": "Depreciation of fittings in leased premises",
+          "2020": "Depreciation, private share",
+          "2030": "Gain and loss on sale of assets"
+        }
+      },
+      "interestIncome": {
+        "title": "Interest Income",
+        "accounts": {
+          "2400": "Bank interest income",
+          "2410": "Interest income from customers"
+        }
+      },
+      "interestExpenses": {
+        "title": "Interest Expenses",
+        "accounts": {
+          "2500": "Bank and mortgage interest expenses",
+          "2510": "Interest expenses to suppliers",
+          "2520": "Deductible loan costs",
+          "2530": "Deductible interest expenses to public authorities"
+        }
+      }
+    },
+    "balanceSheet": {
+      "title": "Balance Sheet",
+      "businessFixedAssets": {
+        "title": "Property, Plant, and Equipment (100% business use)",
+        "accounts": {
+          "3000": "Opening depreciation base",
+          "3010": "Purchases during the year",
+          "3015": "Improvements during the year",
+          "3020": "Sales during the year",
+          "3030": "Depreciation for the year",
+          "3040": "Gains and losses"
+        }
+      },
+      "mixedUseFixedAssets": {
+        "title": "Property, Plant, and Equipment (mixed-use)",
+        "accounts": {
+          "3100": "Opening depreciation base",
+          "3110": "Purchases during the year",
+          "3115": "Improvements during the year",
+          "3120": "Sales during the year",
+          "3130": "Depreciation for the year",
+          "3140": "Gains and losses"
+        }
+      },
+      "leasedPremises": {
+        "title": "Fittings of leased premises (100% business use)",
+        "accounts": {
+          "3200": "Opening depreciation base",
+          "3210": "Purchases during the year",
+          "3220": "Sales during the year",
+          "3230": "Depreciation for the year",
+          "3240": "Gains and losses"
+        }
+      },
+      "deposits": {
+        "title": "Deposits",
+        "accounts": {
+          "3900": "Rent deposit",
+          "3910": "Car-sharing deposit"
+        }
+      },
+      "currentAssets": {
+        "title": "Current assets",
+        "accounts": {
+          "4000": "Cash",
+          "4010": "Bank",
+          "4020": "Prepaid expenses",
+          "4030": "Accounts receivable",
+          "4040": "Inventory",
+          "4050": "Work in progress"
+        }
+      },
+      "equity": {
+        "title": "Equity",
+        "accounts": {
+          "5000": "Equity at beginning of period",
+          "5010": "Profit/loss for the period",
+          "5020": "Owner withdrawals",
+          "5030": "Company car benefit",
+          "5040": "Standard rates",
+          "5050": "Company phone benefit",
+          "5060": "Private amounts",
+          "5065": "Private depreciation",
+          "5070": "Non-deductible operating expenses",
+          "5080": "Private contributions"
+        }
+      },
+      "liabilities": {
+        "title": "Liabilities",
+        "accounts": {
+          "7000": "Loans from banks and mortgage institutions",
+          "7010": "Trade payables",
+          "7020": "Accruals",
+          "7025": "Grants subject to future taxation",
+          "7030": "Other liabilities"
+        }
+      },
+      "vat": {
+        "title": "VAT",
+        "accounts": {
+          "8000": "Sales VAT",
+          "8010": "Purchase VAT",
+          "8020": "VAT on goods purchased abroad (both EU and third countries)",
+          "8030": "VAT on service purchases abroad under reverse charge",
+          "8040": "Electricity tax",
+          "8050": "Other energy taxes",
+          "8060": "VAT settlement"
+        }
+      }
+    }
   }
 }
