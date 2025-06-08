@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
+import { Navbar } from "@/components/nav-bar";
 import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
@@ -18,13 +19,17 @@ export const metadata: Metadata = {
   description: "A platform for counting the beans yourself.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <link
         rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫘</text></svg>"
@@ -36,6 +41,7 @@ export default function RootLayout({
           "h-screen overflow-hidden antialiased"
         )}
       >
+        <Navbar className="fixed top-0 left-0" />
         {children}
       </body>
     </html>

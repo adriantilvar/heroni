@@ -1,7 +1,32 @@
 import "server-only";
 import type { Locale } from "./config.ts";
 
-type Dictionary = { landing: { hello: string } };
+export type Account = {
+  code: string;
+  name: string;
+  description: string;
+  type: string;
+  category: string;
+};
+
+type ChartOfAccounts = {
+  title: string;
+  incomeStatement: {
+    title: string;
+    accounts: Account[];
+  };
+  balanceSheet: {
+    title: string;
+    accounts: Account[];
+  };
+};
+
+type Dictionary = {
+  landing: {
+    hello: string;
+  };
+  chartOfAccounts: ChartOfAccounts;
+};
 
 const dictionaries: { [key in Locale]: () => Promise<Dictionary> } = {
   en: () =>

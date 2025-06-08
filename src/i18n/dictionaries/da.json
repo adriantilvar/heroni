@@ -6,222 +6,874 @@
     "title": "Kontoplan",
     "incomeStatement": {
       "title": "Resultatopgørelse",
-      "netRevenue": {
-        "title": "Nettoomsætning",
-        "accounts": {
-          "1000": "Salg af varer / ydelser m. moms",
-          "1010": "Salg af varer i EU",
-          "1015": "Salg af varer til lande udenfor EU",
-          "1020": "Salg af ydelser i EU",
-          "1025": "Salg af ydelser til lande udenfor EU",
-          "1030": "Ej momspligtigt salg",
-          "1040": "Regulering igangværende arbejder",
-          "1050": "Offentlige tilskud"
+      "accounts": [
+        {
+          "code": "1000",
+          "name": "Salg af varer / ydelser m. moms",
+          "description": "Salg af varer / ydelser m. moms",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1010",
+          "name": "Salg af varer i EU",
+          "description": "Salg af varer i EU",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1015",
+          "name": "Salg af varer til lande udenfor EU",
+          "description": "Salg af varer til lande udenfor EU",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1020",
+          "name": "Salg af ydelser i EU",
+          "description": "Salg af ydelser i EU",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1025",
+          "name": "Salg af ydelser til lande udenfor EU",
+          "description": "Salg af ydelser til lande udenfor EU",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1030",
+          "name": "Ej momspligtigt salg",
+          "description": "Ej momspligtigt salg",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1040",
+          "name": "Regulering igangværende arbejder",
+          "description": "Regulering igangværende arbejder",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1050",
+          "name": "Offentlige tilskud",
+          "description": "Offentlige tilskud",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1100",
+          "name": "Varekøb med moms",
+          "description": "Varekøb med moms",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1110",
+          "name": "Køb af varer i EU",
+          "description": "Køb af varer i EU",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1115",
+          "name": "Køb af varer uden for EU",
+          "description": "Køb af varer uden for EU",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1120",
+          "name": "Køb af ydelser i EU",
+          "description": "Køb af ydelser i EU",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1125",
+          "name": "Køb af ydelser uden for EU",
+          "description": "Køb af ydelser uden for EU",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1130",
+          "name": "Varelagerregulering",
+          "description": "Varelagerregulering",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1135",
+          "name": "Told (varer til videresalg)",
+          "description": "Told (varer til videresalg)",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1140",
+          "name": "Eget vareforbrug",
+          "description": "Eget vareforbrug",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1200",
+          "name": "Løn og feriepenge",
+          "description": "Løn og feriepenge",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1202",
+          "name": "ATP",
+          "description": "ATP",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1203",
+          "name": "Pensioner",
+          "description": "Pensioner",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1204",
+          "name": "Fri telefon",
+          "description": "Fri telefon",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1205",
+          "name": "Fri bil",
+          "description": "Fri bil",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1206",
+          "name": "Kørselsgodtgørelse",
+          "description": "Kørselsgodtgørelse",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1207",
+          "name": "Rejsegodtgørelse",
+          "description": "Rejsegodtgørelse",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1240",
+          "name": "Arbejdsgiverbidrag (samlet betaling)",
+          "description": "Arbejdsgiverbidrag (samlet betaling)",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1250",
+          "name": "Lønrefusioner og løntilskud",
+          "description": "Lønrefusioner og løntilskud",
+          "type": "Revenue",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1260",
+          "name": "Regulering af feriepengeforpligtelse",
+          "description": "Regulering af feriepengeforpligtelse",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1270",
+          "name": "Andre personaleomkostninger",
+          "description": "Andre personaleomkostninger",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1300",
+          "name": "Repræsentation",
+          "description": "Repræsentation",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1310",
+          "name": "Annoncer/reklame",
+          "description": "Annoncer/reklame",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1320",
+          "name": "Rejseudgifter",
+          "description": "Rejseudgifter",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1330",
+          "name": "Aviser og blade",
+          "description": "Aviser og blade",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1400",
+          "name": "Brændstof",
+          "description": "Brændstof",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1401",
+          "name": "Køb af EV ladestation",
+          "description": "Køb af EV ladestation",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1410",
+          "name": "Bilforsikring",
+          "description": "Bilforsikring",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1420",
+          "name": "Vedligeholdelse",
+          "description": "Vedligeholdelse",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1430",
+          "name": "Grøn ejerafgift mv.",
+          "description": "Grøn ejerafgift mv.",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1440",
+          "name": "Leje og Leasing",
+          "description": "Leje og Leasing",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1450",
+          "name": "Bilvask og pleje af bil",
+          "description": "Bilvask og pleje af bil",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1460",
+          "name": "Parkeringsudgifter",
+          "description": "Parkeringsudgifter",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1470",
+          "name": "Biludgifter efter standardsatserne",
+          "description": "Biludgifter efter standardsatserne",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1475",
+          "name": "Driftsudgifter biler",
+          "description": "Driftsudgifter biler",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1480",
+          "name": "Fri bil",
+          "description": "Fri bil",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1490",
+          "name": "Privat andel af biludgifter",
+          "description": "Privat andel af biludgifter",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1600",
+          "name": "Husleje uden forbrug",
+          "description": "Husleje uden forbrug",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1610",
+          "name": "Forbrugsudgifter (el, vand, gas og varme mv)",
+          "description": "Forbrugsudgifter (el, vand, gas og varme mv)",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1620",
+          "name": "Ejendomsskatter og forsikringer",
+          "description": "Ejendomsskatter og forsikringer",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1630",
+          "name": "Vedligeholdelse af lokaler",
+          "description": "Vedligeholdelse af lokaler",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1700",
+          "name": "Kontorartikler og tryksager",
+          "description": "Kontorartikler og tryksager",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1705",
+          "name": "Telefon og internet",
+          "description": "Telefon og internet",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1710",
+          "name": "Fri telefon / Privat andel",
+          "description": "Fri telefon / Privat andel",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1715",
+          "name": "Anskaffelse af småaktiver",
+          "description": "Anskaffelse af småaktiver",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1716",
+          "name": "Anskaffelse af småaktiver i EU",
+          "description": "Anskaffelse af småaktiver i EU",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1717",
+          "name": "Køb af småaktiver udenfor EU",
+          "description": "Køb af småaktiver udenfor EU",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1718",
+          "name": "Told (varer ikke til videresalg)",
+          "description": "Told (varer ikke til videresalg)",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1720",
+          "name": "Arbejdstøj",
+          "description": "Arbejdstøj",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1725",
+          "name": "Rådgiverudgifter",
+          "description": "Rådgiverudgifter",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1730",
+          "name": "Porto og gebyrer",
+          "description": "Porto og gebyrer",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1735",
+          "name": "Forsikringer",
+          "description": "Forsikringer",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1740",
+          "name": "Bøger og faglitteratur",
+          "description": "Bøger og faglitteratur",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1745",
+          "name": "Konstaterede tab på debitorer",
+          "description": "Konstaterede tab på debitorer",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1750",
+          "name": "Kassedifferencer",
+          "description": "Kassedifferencer",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1755",
+          "name": "Vedligeholdelse af driftsmidler",
+          "description": "Vedligeholdelse af driftsmidler",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1760",
+          "name": "Kursusudgifter",
+          "description": "Kursusudgifter",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1770",
+          "name": "Køb af momspligtige ydelser i EU (Ikke til videresalg)",
+          "description": "Køb af momspligtige ydelser i EU (Ikke til videresalg)",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1775",
+          "name": "Køb af momspligtige ydelser udenfor EU (ikke til videresalg)",
+          "description": "Køb af momspligtige ydelser udenfor EU (ikke til videresalg)",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "2000",
+          "name": "Afskrivning driftsmidler og inventar",
+          "description": "Afskrivning driftsmidler og inventar",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2010",
+          "name": "Afskrivning blandede driftsmidler",
+          "description": "Afskrivning blandede driftsmidler",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2015",
+          "name": "Afskrivning indretning af lejede lokaler",
+          "description": "Afskrivning indretning af lejede lokaler",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2020",
+          "name": "Afskrivninger privat andel",
+          "description": "Afskrivninger privat andel",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2030",
+          "name": "Gevinst og tab ved salg af aktiver",
+          "description": "Gevinst og tab ved salg af aktiver",
+          "type": "Revenue",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2400",
+          "name": "Renteindtægter bank",
+          "description": "Renteindtægter bank",
+          "type": "Revenue",
+          "category": "Interest Income"
+        },
+        {
+          "code": "2410",
+          "name": "Renteindtægter kunder",
+          "description": "Renteindtægter kunder",
+          "type": "Revenue",
+          "category": "Interest Income"
+        },
+        {
+          "code": "2500",
+          "name": "Renteudgifter bank og realkreditinstitut",
+          "description": "Renteudgifter bank og realkreditinstitut",
+          "type": "Expenses",
+          "category": "Interest Expenses"
+        },
+        {
+          "code": "2510",
+          "name": "Renteudgifter leverandører",
+          "description": "Renteudgifter leverandører",
+          "type": "Expenses",
+          "category": "Interest Expenses"
+        },
+        {
+          "code": "2520",
+          "name": "Fradragsberettiget låneomkostninger",
+          "description": "Fradragsberettiget låneomkostninger",
+          "type": "Expenses",
+          "category": "Interest Expenses"
+        },
+        {
+          "code": "2530",
+          "name": "Fradragsberettiget renteudgifter til det offentlige",
+          "description": "Fradragsberettiget renteudgifter til det offentlige",
+          "type": "Expenses",
+          "category": "Interest Expenses"
         }
-      },
-      "costOfSales": {
-        "title": "Vareforbrug",
-        "accounts": {
-          "1100": "Varekøb med moms",
-          "1110": "Køb af varer i EU",
-          "1115": "Køb af varer uden for EU",
-          "1120": "Køb af ydelser i EU",
-          "1125": "Køb af ydelser uden for EU",
-          "1130": "Varelagerregulering",
-          "1135": "Told (varer til videresalg)",
-          "1140": "Eget vareforbrug"
-        }
-      },
-      "costOfLabor": {
-        "title": "Løn og Personaleomkostninger",
-        "accounts": {
-          "1200": "Løn og feriepenge",
-          "1202": "ATP",
-          "1203": "Pensioner",
-          "1204": "Fri telefon",
-          "1205": "Fri bil",
-          "1206": "Kørselsgodtgørelse",
-          "1207": "Rejsegodtgørelse",
-          "1240": "Arbejdsgiverbidrag (samlet betaling)",
-          "1250": "Lønrefusioner og løntilskud",
-          "1260": "Regulering af feriepengeforpligtelse",
-          "1270": "Andre personaleomkostninger"
-        }
-      },
-      "sellingExpenses": {
-        "title": "Salgsomkostninger",
-        "accounts": {
-          "1300": "Repræsentation",
-          "1310": "Annoncer/reklame",
-          "1320": "Rejseudgifter",
-          "1330": "Aviser og blade"
-        }
-      },
-      "transportExpenses": {
-        "title": "Transportomkostninger",
-        "accounts": {
-          "1400": "Brændstof",
-          "1401": "Køb af EV ladestation",
-          "1410": "Bilforsikring",
-          "1420": "Vedligeholdelse",
-          "1430": "Grøn ejerafgift mv.",
-          "1440": "Leje og Leasing",
-          "1450": "Bilvask og pleje af bil",
-          "1460": "Parkeringsudgifter",
-          "1470": "Biludgifter efter standardsatserne",
-          "1475": "Driftsudgifter biler",
-          "1480": "Fri bil",
-          "1490": "Privat andel af biludgifter"
-        }
-      },
-      "premisesExpenses": {
-        "title": "Lokaleomkostninger",
-        "accounts": {
-          "1600": "Husleje uden forbrug",
-          "1610": "Forbrugsudgifter (el, vand, gas og varme mv)",
-          "1620": "Ejendomsskatter og forsikringer",
-          "1630": "Vedligeholdelse af lokaler"
-        }
-      },
-      "administrativeExpenses": {
-        "title": "Administrationsomkostninger",
-        "accounts": {
-          "1700": "Kontorartikler og tryksager",
-          "1705": "Telefon og internet",
-          "1710": "Fri telefon / Privat andel",
-          "1715": "Anskaffelse af småaktiver",
-          "1716": "Anskaffelse af småaktiver i EU",
-          "1717": "Køb af småaktiver udenfor EU",
-          "1718": "Told (varer ikke til videresalg)",
-          "1720": "Arbejdstøj",
-          "1725": "Rådgiverudgifter",
-          "1730": "Porto og gebyrer",
-          "1735": "Forsikringer",
-          "1740": "Bøger og faglitteratur",
-          "1745": "Konstaterede tab på debitorer",
-          "1750": "Kassedifferencer",
-          "1755": "Vedligeholdelse af driftsmidler",
-          "1760": "Kursusudgifter",
-          "1770": "Køb af momspligtige ydelser i EU (Ikke til videresalg)",
-          "1775": "Køb af momspligtige ydelser udenfor EU (ikke til videresalg)"
-        }
-      },
-      "taxDepreciation": {
-        "title": "Skattemæssige afskrivninger",
-        "accounts": {
-          "2000": "Afskrivning driftsmidler og inventar",
-          "2010": "Afskrivning blandede driftsmidler",
-          "2015": "Afskrivning indretning af lejede lokaler",
-          "2020": "Afskrivninger privat andel",
-          "2030": "Gevinst og tab ved salg af aktiver"
-        }
-      },
-      "interestIncome": {
-        "title": "Renteindtægter",
-        "accounts": {
-          "2400": "Renteindtægter bank",
-          "2410": "Renteindtægter kunder"
-        }
-      },
-      "interestExpenses": {
-        "title": "Renteudgifter",
-        "accounts": {
-          "2500": "Renteudgifter bank og realkreditinstitut",
-          "2510": "Renteudgifter leverandører",
-          "2520": "Fradragsberettiget låneomkostninger",
-          "2530": "Fradragsberettiget renteudgifter til det offentlige"
-        }
-      }
+      ]
     },
     "balanceSheet": {
       "title": "Balance",
-      "businessFixedAssets": {
-        "title": "Driftsmidler og inventar (100% erhvervsmæssigt)",
-        "accounts": {
-          "3000": "Afskrivningsgrundlag primo",
-          "3010": "Årets køb",
-          "3015": "Årets forbedringer",
-          "3020": "Årets salg",
-          "3030": "Årets afskrivning",
-          "3040": "Gevinst og tab"
+      "accounts": [
+        {
+          "code": "3000",
+          "name": "Afskrivningsgrundlag primo",
+          "description": "Afskrivningsgrundlag primo",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3010",
+          "name": "Årets køb",
+          "description": "Årets køb",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3015",
+          "name": "Årets forbedringer",
+          "description": "Årets forbedringer",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3020",
+          "name": "Årets salg",
+          "description": "Årets salg",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3030",
+          "name": "Årets afskrivning",
+          "description": "Årets afskrivning",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3040",
+          "name": "Gevinst og tab",
+          "description": "Gevinst og tab",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3100",
+          "name": "Afskrivningsgrundlag primo",
+          "description": "Afskrivningsgrundlag primo",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (blandede driftsmidler)"
+        },
+        {
+          "code": "3110",
+          "name": "Årets køb",
+          "description": "Årets køb",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (blandede driftsmidler)"
+        },
+        {
+          "code": "3115",
+          "name": "Årets forbedringer",
+          "description": "Årets forbedringer",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (blandede driftsmidler)"
+        },
+        {
+          "code": "3120",
+          "name": "Årets salg",
+          "description": "Årets salg",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (blandede driftsmidler)"
+        },
+        {
+          "code": "3130",
+          "name": "Årets afskrivning",
+          "description": "Årets afskrivning",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (blandede driftsmidler)"
+        },
+        {
+          "code": "3140",
+          "name": "Gevinst og tab",
+          "description": "Gevinst og tab",
+          "type": "Assets",
+          "category": "Driftsmidler og inventar (blandede driftsmidler)"
+        },
+        {
+          "code": "3200",
+          "name": "Afskrivningsgrundlag Primo",
+          "description": "Afskrivningsgrundlag Primo",
+          "type": "Assets",
+          "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3210",
+          "name": "Årets køb",
+          "description": "Årets køb",
+          "type": "Assets",
+          "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3220",
+          "name": "Årets salg",
+          "description": "Årets salg",
+          "type": "Assets",
+          "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3230",
+          "name": "Årets afskrivning",
+          "description": "Årets afskrivning",
+          "type": "Assets",
+          "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3240",
+          "name": "Gevinst/Tab",
+          "description": "Gevinst/Tab",
+          "type": "Assets",
+          "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
+        },
+        {
+          "code": "3900",
+          "name": "Huslejedepositum",
+          "description": "Huslejedepositum",
+          "type": "Assets",
+          "category": "Deposita"
+        },
+        {
+          "code": "3910",
+          "name": "Depositum delebil",
+          "description": "Depositum delebil",
+          "type": "Assets",
+          "category": "Deposita"
+        },
+        {
+          "code": "4000",
+          "name": "Kasse",
+          "description": "Kasse",
+          "type": "Assets",
+          "category": "Omsætningsaktiver"
+        },
+        {
+          "code": "4010",
+          "name": "Bank",
+          "description": "Bank",
+          "type": "Assets",
+          "category": "Omsætningsaktiver"
+        },
+        {
+          "code": "4020",
+          "name": "Forudbetalte omkostninger",
+          "description": "Forudbetalte omkostninger",
+          "type": "Assets",
+          "category": "Omsætningsaktiver"
+        },
+        {
+          "code": "4030",
+          "name": "Debitorer",
+          "description": "Debitorer",
+          "type": "Assets",
+          "category": "Omsætningsaktiver"
+        },
+        {
+          "code": "4040",
+          "name": "Varelager",
+          "description": "Varelager",
+          "type": "Assets",
+          "category": "Omsætningsaktiver"
+        },
+        {
+          "code": "4050",
+          "name": "Igangværende arbejder",
+          "description": "Igangværende arbejder",
+          "type": "Assets",
+          "category": "Omsætningsaktiver"
+        },
+        {
+          "code": "5000",
+          "name": "Egenkapital primo",
+          "description": "Egenkapital primo",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5010",
+          "name": "Årets resultat",
+          "description": "Årets resultat",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5020",
+          "name": "Privat hævet",
+          "description": "Privat hævet",
+          "type": "Dividends",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5030",
+          "name": "Fri bil",
+          "description": "Fri bil",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5040",
+          "name": "Standardsatserne",
+          "description": "Standardsatserne",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5050",
+          "name": "Fri telefon m.v.",
+          "description": "Fri telefon m.v.",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5060",
+          "name": "Private andele",
+          "description": "Private andele",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5065",
+          "name": "Private afskrivninger",
+          "description": "Private afskrivninger",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5070",
+          "name": "Driftsudgifter uden fradrag",
+          "description": "Driftsudgifter uden fradrag",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "5080",
+          "name": "Privat udlæg / indskud",
+          "description": "Privat udlæg / indskud",
+          "type": "Equity",
+          "category": "Egenkapital"
+        },
+        {
+          "code": "7000",
+          "name": "Gæld bank og realkreditinstitut",
+          "description": "Gæld bank og realkreditinstitut",
+          "type": "Liabilities",
+          "category": "Gæld"
+        },
+        {
+          "code": "7010",
+          "name": "Gæld til leverandører af varer og tjenesteydelser",
+          "description": "Gæld til leverandører af varer og tjenesteydelser",
+          "type": "Liabilities",
+          "category": "Gæld"
+        },
+        {
+          "code": "7020",
+          "name": "Periodeafgrænsningsposter",
+          "description": "Periodeafgrænsningsposter",
+          "type": "Liabilities",
+          "category": "Gæld"
+        },
+        {
+          "code": "7025",
+          "name": "Tilskud til senere beskatning",
+          "description": "Tilskud til senere beskatning",
+          "type": "Liabilities",
+          "category": "Gæld"
+        },
+        {
+          "code": "7030",
+          "name": "Anden Gæld",
+          "description": "Anden Gæld",
+          "type": "Liabilities",
+          "category": "Gæld"
+        },
+        {
+          "code": "8000",
+          "name": "Salgsmoms",
+          "description": "Salgsmoms",
+          "type": "Liabilities",
+          "category": "Moms"
+        },
+        {
+          "code": "8010",
+          "name": "Købsmoms",
+          "description": "Købsmoms",
+          "type": "Assets",
+          "category": "Moms"
+        },
+        {
+          "code": "8020",
+          "name": "Moms af varekøb i udlandet (både EU og tredjelande)",
+          "description": "Moms af varekøb i udlandet (både EU og tredjelande)",
+          "type": "Liabilities",
+          "category": "Moms"
+        },
+        {
+          "code": "8030",
+          "name": "Moms af ydelseskøb i udlandet med omvendt betalingspligt",
+          "description": "Moms af ydelseskøb i udlandet med omvendt betalingspligt",
+          "type": "Liabilities",
+          "category": "Moms"
+        },
+        {
+          "code": "8040",
+          "name": "El- afgift",
+          "description": "El- afgift",
+          "type": "Liabilities",
+          "category": "Moms"
+        },
+        {
+          "code": "8050",
+          "name": "Øvrige energiafgifter",
+          "description": "Øvrige energiafgifter",
+          "type": "Liabilities",
+          "category": "Moms"
+        },
+        {
+          "code": "8060",
+          "name": "Momsafregning",
+          "description": "Momsafregning",
+          "type": "Liabilities",
+          "category": "Moms"
         }
-      },
-      "mixedUseFixedAssets": {
-        "title": "Driftsmidler og inventar (blandede driftsmidler)",
-        "accounts": {
-          "3100": "Afskrivningsgrundlag primo",
-          "3110": "Årets køb",
-          "3115": "Årets forbedringer",
-          "3120": "Årets salg",
-          "3130": "Årets afskrivning",
-          "3140": "Gevinst og tab"
-        }
-      },
-      "leasedPremises": {
-        "title": "Indretning af lejede lokaler (100% erhvervsmæssigt)",
-        "accounts": {
-          "3200": "Afskrivningsgrundlag Primo",
-          "3210": "Årets køb",
-          "3220": "Årets salg",
-          "3230": "Årets afskrivning",
-          "3240": "Gevinst/Tab"
-        }
-      },
-      "deposits": {
-        "title": "Deposita",
-        "accounts": {
-          "3900": "Huslejedepositum",
-          "3910": "Depositum delebil"
-        }
-      },
-      "currentAssets": {
-        "title": "Omsætningsaktiver",
-        "accounts": {
-          "4000": "Kasse",
-          "4010": "Bank",
-          "4020": "Forudbetalte omkostninger",
-          "4030": "Debitorer",
-          "4040": "Varelager",
-          "4050": "Igangværende arbejder"
-        }
-      },
-      "equity": {
-        "title": "Egenkapital",
-        "accounts": {
-          "5000": "Egenkapital primo",
-          "5010": "Årets resultat",
-          "5020": "Privat hævet",
-          "5030": "Fri bil",
-          "5040": "Standardsatserne",
-          "5050": "Fri telefon m.v.",
-          "5060": "Private andele",
-          "5065": "Private afskrivninger",
-          "5070": "Driftsudgifter uden fradrag",
-          "5080": "Privat udlæg / indskud"
-        }
-      },
-      "liabilities": {
-        "title": "Gæld",
-        "accounts": {
-          "7000": "Gæld bank og realkreditinstitut",
-          "7010": "Gæld til leverandører af varer og tjenesteydelser",
-          "7020": "Periodeafgrænsningsposter",
-          "7025": "Tilskud til senere beskatning",
-          "7030": "Anden Gæld"
-        }
-      },
-      "vat": {
-        "title": "Moms",
-        "accounts": {
-          "8000": "Salgsmoms",
-          "8010": "Købsmoms",
-          "8020": "Moms af varekøb i udlandet (både EU og tredjelande)",
-          "8030": "Moms af ydelseskøb i udlandet med omvendt betalingspligt",
-          "8040": "El- afgift",
-          "8050": "Øvrige energiafgifter",
-          "8060": "Momsafregning"
-        }
-      }
+      ]
     }
   }
 }

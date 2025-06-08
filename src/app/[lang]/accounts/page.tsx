@@ -1,13 +1,29 @@
-export default function AccountsPage() {
-  return (
-    <main className="mt-32 flex h-full flex-col items-center font-mono">
-      <div className="flex flex-col items-end xl:w-5xl">
-        <div className="w-full space-y-1">
-          <h2 className="font-semibold">Accounts</h2>
-          <p>Manage your accounts and their details.</p>
-        </div>
+import { Input } from "@/components/ui/input.tsx";
+import { getDictionary } from "@/i18n/get-dictionary";
+import { AccountsTable } from "./accounts-table.tsx";
 
-        {/* Add account management components here */}
+export default async function AccountsPage({
+  params,
+}: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  const { chartOfAccounts } = await getDictionary(lang);
+
+  const allAccounts = chartOfAccounts.incomeStatement.accounts.concat(
+    chartOfAccounts.balanceSheet.accounts
+  );
+
+  return (
+    <main className="flex h-full justify-center overflow-scroll py-24 font-mono">
+      <div className="flex h-fit flex-col items-start xl:w-6xl">
+        <div className="w-full">
+          <Input
+            type="search"
+            placeholder="Search"
+            className="w-64 rounded-none"
+          />
+
+          <AccountsTable accounts={allAccounts} />
+        </div>
       </div>
     </main>
   );

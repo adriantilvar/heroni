@@ -6,222 +6,874 @@
     "title": "Chart of Accounts",
     "incomeStatement": {
       "title": "Income Statement",
-      "netRevenue": {
-        "title": "Net Revenue",
-        "accounts": {
-          "1000": "Sales of goods/services including VAT",
-          "1010": "Sales of goods within the EU",
-          "1015": "Sales of goods to countries outside the EU",
-          "1020": "Sales of services within the EU",
-          "1025": "Sales of services to countries outside the EU",
-          "1030": "Non-VAT-liable sales",
-          "1040": "Adjustments on work in progress",
-          "1050": "Government grants"
+      "accounts": [
+        {
+          "code": "1000",
+          "name": "Sales of goods/services including VAT",
+          "description": "Revenue from all sales including Danish VAT (moms)",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1010",
+          "name": "Sales of goods within the EU",
+          "description": "Revenue from goods sold to other EU member states",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1015",
+          "name": "Sales of goods to countries outside the EU",
+          "description": "Export revenue from goods sold to non-EU countries",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1020",
+          "name": "Sales of services within the EU",
+          "description": "Revenue from services provided to other EU member states",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1025",
+          "name": "Sales of services to countries outside the EU",
+          "description": "Revenue from services provided to non-EU countries",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1030",
+          "name": "Non-VAT-liable sales",
+          "description": "Revenue from sales that are exempt from Danish VAT",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1040",
+          "name": "Adjustments on work in progress",
+          "description": "Changes in value of ongoing projects or unfinished work",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1050",
+          "name": "Government grants",
+          "description": "Financial support received from Danish government or EU",
+          "type": "Revenue",
+          "category": "Net Revenue"
+        },
+        {
+          "code": "1100",
+          "name": "Purchases of goods including VAT",
+          "description": "Cost of goods purchased for resale including Danish VAT",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1110",
+          "name": "Purchases of goods within the EU",
+          "description": "Cost of goods purchased from other EU member states",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1115",
+          "name": "Purchases of goods outside the EU",
+          "description": "Cost of goods imported from non-EU countries",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1120",
+          "name": "Purchases of services within the EU",
+          "description": "Cost of services purchased from other EU member states",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1125",
+          "name": "Purchases of services outside the EU",
+          "description": "Cost of services purchased from non-EU countries",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1130",
+          "name": "Inventory adjustment",
+          "description": "Changes in inventory value due to write-downs or revaluations",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1135",
+          "name": "Customs duties (goods for resale)",
+          "description": "Import duties paid on goods purchased for resale",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1140",
+          "name": "Own consumption of goods",
+          "description": "Value of goods taken from inventory for personal use",
+          "type": "Expenses",
+          "category": "Cost Of Sales"
+        },
+        {
+          "code": "1200",
+          "name": "Wages and holiday pay",
+          "description": "Employee salaries and mandatory vacation pay (feriepenge)",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1202",
+          "name": "ATP",
+          "description": "Danish supplementary pension scheme contributions",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1203",
+          "name": "Pensions",
+          "description": "Employer contributions to employee pension schemes",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1204",
+          "name": "Company phone benefit",
+          "description": "Taxable benefit value of company-provided mobile phones",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1205",
+          "name": "Company car benefit",
+          "description": "Taxable benefit value of company cars for personal use",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1206",
+          "name": "Mileage allowance",
+          "description": "Reimbursement for business use of personal vehicles",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1207",
+          "name": "Travel allowance",
+          "description": "Daily allowances for business travel expenses",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1240",
+          "name": "Employer contributions (total payment)",
+          "description": "Total social security contributions paid by employer",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1250",
+          "name": "Wage refunds and wage subsidies",
+          "description": "Government wage support and reimbursements received",
+          "type": "Revenue",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1260",
+          "name": "Holiday pay liability adjustment",
+          "description": "Changes in accrued vacation pay obligations",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1270",
+          "name": "Other personnel costs",
+          "description": "Additional employee-related expenses not covered elsewhere",
+          "type": "Expenses",
+          "category": "Cost of Labor"
+        },
+        {
+          "code": "1300",
+          "name": "Representation expenses",
+          "description": "Business entertainment and client relationship costs",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1310",
+          "name": "Advertising",
+          "description": "Marketing and promotional expenses",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1320",
+          "name": "Travel expenses",
+          "description": "Business travel costs including accommodation and meals",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1330",
+          "name": "Newspapers and periodicals",
+          "description": "Subscriptions to business publications and trade magazines",
+          "type": "Expenses",
+          "category": "Selling Expenses"
+        },
+        {
+          "code": "1400",
+          "name": "Fuel",
+          "description": "Gasoline, diesel, and other vehicle fuel costs",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1401",
+          "name": "Purchase of EV charging station",
+          "description": "Electric vehicle charging equipment and installation",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1410",
+          "name": "Vehicle insurance",
+          "description": "Motor vehicle insurance premiums",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1420",
+          "name": "Maintenance",
+          "description": "Vehicle repairs and maintenance costs",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1430",
+          "name": "Green ownership tax etc.",
+          "description": "Danish vehicle registration tax and environmental fees",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1440",
+          "name": "Rental and leasing",
+          "description": "Vehicle rental and leasing payments",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1450",
+          "name": "Car wash and care",
+          "description": "Vehicle cleaning and detailing expenses",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1460",
+          "name": "Parking fees",
+          "description": "Parking costs for business activities",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1470",
+          "name": "Standard mileage allowances",
+          "description": "Fixed-rate reimbursements for business mileage",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1475",
+          "name": "Operating costs, vehicles",
+          "description": "General vehicle operating expenses",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1480",
+          "name": "Company car benefit",
+          "description": "Personal use value of company vehicles",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1490",
+          "name": "Private share of vehicle costs",
+          "description": "Personal portion of mixed-use vehicle expenses",
+          "type": "Expenses",
+          "category": "Transport Expenses"
+        },
+        {
+          "code": "1600",
+          "name": "Rent (excluding utilities)",
+          "description": "Office and business premises rental costs",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1610",
+          "name": "Utilities (electricity, water, gas, heating, etc.)",
+          "description": "Energy and utility costs for business premises",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1620",
+          "name": "Property taxes and insurance",
+          "description": "Property-related taxes and insurance premiums",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1630",
+          "name": "Premises maintenance",
+          "description": "Building repairs and maintenance costs",
+          "type": "Expenses",
+          "category": "Premises Expenses"
+        },
+        {
+          "code": "1700",
+          "name": "Office supplies and printing",
+          "description": "Stationery, printing, and office equipment supplies",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1705",
+          "name": "Telephone and internet",
+          "description": "Business communication and internet service costs",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1710",
+          "name": "Company phone benefit / private share",
+          "description": "Personal use portion of company phone expenses",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1715",
+          "name": "Acquisition of small assets",
+          "description": "Purchase of minor equipment and tools under DKK 13,100",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1716",
+          "name": "Acquisition of small assets in the EU",
+          "description": "Small asset purchases from other EU member states",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1717",
+          "name": "Acquisition of small assets outside the EU",
+          "description": "Small asset purchases from non-EU countries",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1718",
+          "name": "Customs duties (non-resale goods)",
+          "description": "Import duties on equipment and supplies for business use",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1720",
+          "name": "Workwear",
+          "description": "Employee uniforms and protective clothing",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1725",
+          "name": "Professional fees",
+          "description": "Legal, accounting, and consulting service fees",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1730",
+          "name": "Postage and fees",
+          "description": "Postal services and administrative fees",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1735",
+          "name": "Insurance",
+          "description": "Business insurance premiums (excluding vehicle and property)",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1740",
+          "name": "Books and professional literature",
+          "description": "Business books, manuals, and professional publications",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1745",
+          "name": "Write-offs on receivables",
+          "description": "Bad debt expenses for uncollectible customer accounts",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1750",
+          "name": "Cash discrepancies",
+          "description": "Differences found in cash register reconciliations",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1755",
+          "name": "Maintenance of production equipment",
+          "description": "Repairs and upkeep of manufacturing machinery",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1760",
+          "name": "Training expenses",
+          "description": "Employee education and professional development costs",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1770",
+          "name": "Purchase of VAT-liable services in the EU (not for resale)",
+          "description": "Services from EU providers subject to reverse charge VAT",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "1775",
+          "name": "Purchase of VAT-liable services outside the EU (not for resale)",
+          "description": "Services from non-EU providers subject to reverse charge VAT",
+          "type": "Expenses",
+          "category": "Administrative Expenses"
+        },
+        {
+          "code": "2000",
+          "name": "Depreciation of fixed assets (100% business use)",
+          "description": "Tax depreciation on assets used exclusively for business",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2010",
+          "name": "Depreciation of fixed assets (mixed-use)",
+          "description": "Tax depreciation on assets used for both business and personal purposes",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2015",
+          "name": "Depreciation of leasehold improvements",
+          "description": "Tax depreciation on improvements made to rented premises",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2020",
+          "name": "Depreciation of private share",
+          "description": "Personal portion of depreciation on mixed-use assets",
+          "type": "Expenses",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2030",
+          "name": "Gain and loss on sale of assets",
+          "description": "Profit or loss from disposal of fixed assets",
+          "type": "Revenue",
+          "category": "Tax Depreciation"
+        },
+        {
+          "code": "2400",
+          "name": "Bank interest income",
+          "description": "Interest earned on business bank accounts",
+          "type": "Revenue",
+          "category": "Interest Income"
+        },
+        {
+          "code": "2410",
+          "name": "Interest income from customers",
+          "description": "Interest charged on overdue customer accounts",
+          "type": "Revenue",
+          "category": "Interest Income"
+        },
+        {
+          "code": "2500",
+          "name": "Bank and mortgage interest expenses",
+          "description": "Interest paid on business loans and mortgages",
+          "type": "Expenses",
+          "category": "Interest Expenses"
+        },
+        {
+          "code": "2510",
+          "name": "Interest expenses to suppliers",
+          "description": "Interest charges on overdue supplier payments",
+          "type": "Expenses",
+          "category": "Interest Expenses"
+        },
+        {
+          "code": "2520",
+          "name": "Deductible loan costs",
+          "description": "Tax-deductible fees and costs related to business loans",
+          "type": "Expenses",
+          "category": "Interest Expenses"
+        },
+        {
+          "code": "2530",
+          "name": "Deductible interest expenses to public authorities",
+          "description": "Interest paid on tax debts and government obligations",
+          "type": "Expenses",
+          "category": "Interest Expenses"
         }
-      },
-      "costOfSales": {
-        "title": "Cost Of Sales",
-        "accounts": {
-          "1100": "Purchases of goods including VAT",
-          "1110": "Purchases of goods within the EU",
-          "1115": "Purchases of goods outside the EU",
-          "1120": "Purchases of services within the EU",
-          "1125": "Purchases of services outside the EU",
-          "1130": "Inventory adjustment",
-          "1135": "Customs duties (goods for resale)",
-          "1140": "Own consumption of goods"
-        }
-      },
-      "costOfLabor": {
-        "title": "Cost of Labor",
-        "accounts": {
-          "1200": "Wages and holiday pay",
-          "1202": "ATP",
-          "1203": "Pensions",
-          "1204": "Company phone benefit",
-          "1205": "Company car benefit",
-          "1206": "Mileage allowance",
-          "1207": "Travel allowance",
-          "1240": "Employer contributions (total payment)",
-          "1250": "Wage refunds and wage subsidies",
-          "1260": "Holiday pay liability adjustment",
-          "1270": "Other personnel costs"
-        }
-      },
-      "sellingExpenses": {
-        "title": "Selling Expenses",
-        "accounts": {
-          "1300": "Representation expenses",
-          "1310": "Advertising",
-          "1320": "Travel expenses",
-          "1330": "Newspapers and periodicals"
-        }
-      },
-      "transportExpenses": {
-        "title": "Transport Expenses",
-        "accounts": {
-          "1400": "Fuel",
-          "1401": "Purchase of EV charging station",
-          "1410": "Vehicle insurance",
-          "1420": "Maintenance",
-          "1430": "Green ownership tax etc.",
-          "1440": "Rental and leasing",
-          "1450": "Car wash and care",
-          "1460": "Parking fees",
-          "1470": "Standard mileage allowances",
-          "1475": "Operating costs, vehicles",
-          "1480": "Company car benefit",
-          "1490": "Private share of vehicle costs"
-        }
-      },
-      "premisesExpenses": {
-        "title": "Premises Expenses",
-        "accounts": {
-          "1600": "Rent (excluding utilities)",
-          "1610": "Utilities (electricity, water, gas, heating, etc.)",
-          "1620": "Property taxes and insurance",
-          "1630": "Premises maintenance"
-        }
-      },
-      "administrativeExpenses": {
-        "title": "Administrative Expenses",
-        "accounts": {
-          "1700": "Office supplies and printing",
-          "1705": "Telephone and internet",
-          "1710": "Company phone benefit / private share",
-          "1715": "Acquisition of small assets",
-          "1716": "Acquisition of small assets in the EU",
-          "1717": "Acquisition of small assets outside the EU",
-          "1718": "Customs duties (non-resale goods)",
-          "1720": "Workwear",
-          "1725": "Professional fees",
-          "1730": "Postage and fees",
-          "1735": "Insurance",
-          "1740": "Books and professional literature",
-          "1745": "Write-offs on receivables",
-          "1750": "Cash discrepancies",
-          "1755": "Maintenance of production equipment",
-          "1760": "Training expenses",
-          "1770": "Purchase of VAT-liable services in the EU (not for resale)",
-          "1775": "Purchase of VAT-liable services outside the EU (not for resale)"
-        }
-      },
-      "taxDepreciation": {
-        "title": "Tax Depreciation",
-        "accounts": {
-          "2000": "Depreciation of assets and fixtures",
-          "2010": "Depreciation of mixed-use assets",
-          "2015": "Depreciation of fittings in leased premises",
-          "2020": "Depreciation, private share",
-          "2030": "Gain and loss on sale of assets"
-        }
-      },
-      "interestIncome": {
-        "title": "Interest Income",
-        "accounts": {
-          "2400": "Bank interest income",
-          "2410": "Interest income from customers"
-        }
-      },
-      "interestExpenses": {
-        "title": "Interest Expenses",
-        "accounts": {
-          "2500": "Bank and mortgage interest expenses",
-          "2510": "Interest expenses to suppliers",
-          "2520": "Deductible loan costs",
-          "2530": "Deductible interest expenses to public authorities"
-        }
-      }
+      ]
     },
     "balanceSheet": {
       "title": "Balance Sheet",
-      "businessFixedAssets": {
-        "title": "Property, Plant, and Equipment (100% business use)",
-        "accounts": {
-          "3000": "Opening depreciation base",
-          "3010": "Purchases during the year",
-          "3015": "Improvements during the year",
-          "3020": "Sales during the year",
-          "3030": "Depreciation for the year",
-          "3040": "Gains and losses"
+      "accounts": [
+        {
+          "code": "3000",
+          "name": "Opening depreciation base",
+          "description": "Initial value of fixed assets at the start of the tax year",
+          "type": "Assets",
+          "category": "Fixed Assets (100% business use)"
+        },
+        {
+          "code": "3010",
+          "name": "Purchases during the year",
+          "description": "Fixed assets acquired during the current tax year",
+          "type": "Assets",
+          "category": "Fixed Assets (100% business use)"
+        },
+        {
+          "code": "3015",
+          "name": "Improvements during the year",
+          "description": "Capital improvements made to existing fixed assets",
+          "type": "Assets",
+          "category": "Fixed Assets (100% business use)"
+        },
+        {
+          "code": "3020",
+          "name": "Sales during the year",
+          "description": "Fixed assets disposed of during the current tax year",
+          "type": "Assets",
+          "category": "Fixed Assets (100% business use)"
+        },
+        {
+          "code": "3030",
+          "name": "Depreciation for the year",
+          "description": "Annual depreciation charged on fixed assets",
+          "type": "Assets",
+          "category": "Fixed Assets (100% business use)"
+        },
+        {
+          "code": "3040",
+          "name": "Gains and losses",
+          "description": "Profit or loss from disposal of fixed assets",
+          "type": "Assets",
+          "category": "Fixed Assets (100% business use)"
+        },
+        {
+          "code": "3100",
+          "name": "Opening depreciation base",
+          "description": "Initial value of mixed-use assets at the start of the tax year",
+          "type": "Assets",
+          "category": "Fixed Assets (mixed-use)"
+        },
+        {
+          "code": "3110",
+          "name": "Purchases during the year",
+          "description": "Mixed-use assets acquired during the current tax year",
+          "type": "Assets",
+          "category": "Fixed Assets (mixed-use)"
+        },
+        {
+          "code": "3115",
+          "name": "Improvements during the year",
+          "description": "Capital improvements made to existing mixed-use assets",
+          "type": "Assets",
+          "category": "Fixed Assets (mixed-use)"
+        },
+        {
+          "code": "3120",
+          "name": "Sales during the year",
+          "description": "Mixed-use assets disposed of during the current tax year",
+          "type": "Assets",
+          "category": "Fixed Assets (mixed-use)"
+        },
+        {
+          "code": "3130",
+          "name": "Depreciation for the year",
+          "description": "Annual depreciation charged on mixed-use assets",
+          "type": "Assets",
+          "category": "Fixed Assets (mixed-use)"
+        },
+        {
+          "code": "3140",
+          "name": "Gains and losses",
+          "description": "Profit or loss from disposal of mixed-use assets",
+          "type": "Assets",
+          "category": "Fixed Assets (mixed-use)"
+        },
+        {
+          "code": "3200",
+          "name": "Opening depreciation base",
+          "description": "Initial value of leasehold improvements at the start of the tax year",
+          "type": "Assets",
+          "category": "Improvements to leaseholds (100% business use)"
+        },
+        {
+          "code": "3210",
+          "name": "Purchases during the year",
+          "description": "Leasehold improvements made during the current tax year",
+          "type": "Assets",
+          "category": "Improvements to leaseholds (100% business use)"
+        },
+        {
+          "code": "3220",
+          "name": "Sales during the year",
+          "description": "Leasehold improvements disposed of during the current tax year",
+          "type": "Assets",
+          "category": "Improvements to leaseholds (100% business use)"
+        },
+        {
+          "code": "3230",
+          "name": "Depreciation for the year",
+          "description": "Annual depreciation charged on leasehold improvements",
+          "type": "Assets",
+          "category": "Improvements to leaseholds (100% business use)"
+        },
+        {
+          "code": "3240",
+          "name": "Gains and losses",
+          "description": "Profit or loss from disposal of leasehold improvements",
+          "type": "Assets",
+          "category": "Improvements to leaseholds (100% business use)"
+        },
+        {
+          "code": "3900",
+          "name": "Rent deposit",
+          "description": "Security deposits paid for office or business premises",
+          "type": "Assets",
+          "category": "Deposits"
+        },
+        {
+          "code": "3910",
+          "name": "Car-sharing deposit",
+          "description": "Deposits paid for car-sharing services",
+          "type": "Assets",
+          "category": "Deposits"
+        },
+        {
+          "code": "4000",
+          "name": "Cash",
+          "description": "Cash on hand in registers and petty cash",
+          "type": "Assets",
+          "category": "Current assets"
+        },
+        {
+          "code": "4010",
+          "name": "Bank",
+          "description": "Funds in business checking and savings accounts",
+          "type": "Assets",
+          "category": "Current assets"
+        },
+        {
+          "code": "4020",
+          "name": "Prepaid expenses",
+          "description": "Expenses paid in advance for future periods",
+          "type": "Assets",
+          "category": "Current assets"
+        },
+        {
+          "code": "4030",
+          "name": "Accounts receivable",
+          "description": "Money owed by customers for goods or services provided",
+          "type": "Assets",
+          "category": "Current assets"
+        },
+        {
+          "code": "4040",
+          "name": "Inventory",
+          "description": "Goods held for sale or raw materials for production",
+          "type": "Assets",
+          "category": "Current assets"
+        },
+        {
+          "code": "4050",
+          "name": "Work in progress",
+          "description": "Partially completed projects or products",
+          "type": "Assets",
+          "category": "Current assets"
+        },
+        {
+          "code": "5000",
+          "name": "Equity at beginning of period",
+          "description": "Owner's equity balance at the start of the tax year",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5010",
+          "name": "Profit/loss for the period",
+          "description": "Net income or loss for the current tax year",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5020",
+          "name": "Owner withdrawals",
+          "description": "Money withdrawn by the business owner for personal use",
+          "type": "Dividends",
+          "category": "Equity"
+        },
+        {
+          "code": "5030",
+          "name": "Company car benefit",
+          "description": "Personal use value of company car recorded as equity adjustment",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5040",
+          "name": "Standard rates",
+          "description": "Standardized rates used for tax calculations",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5050",
+          "name": "Company phone benefit",
+          "description": "Personal use value of company phone recorded as equity adjustment",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5060",
+          "name": "Private amounts",
+          "description": "Personal expenses paid through the business",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5065",
+          "name": "Private depreciation",
+          "description": "Personal portion of depreciation on mixed-use assets",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5070",
+          "name": "Non-deductible operating expenses",
+          "description": "Business expenses that are not tax-deductible",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "5080",
+          "name": "Private contributions",
+          "description": "Personal funds contributed to the business",
+          "type": "Equity",
+          "category": "Equity"
+        },
+        {
+          "code": "7000",
+          "name": "Loans from banks and mortgage institutions",
+          "description": "Outstanding debt to financial institutions",
+          "type": "Liabilities",
+          "category": "Liabilities"
+        },
+        {
+          "code": "7010",
+          "name": "Trade payables",
+          "description": "Money owed to suppliers for goods and services",
+          "type": "Liabilities",
+          "category": "Liabilities"
+        },
+        {
+          "code": "7020",
+          "name": "Accruals",
+          "description": "Expenses incurred but not yet paid",
+          "type": "Liabilities",
+          "category": "Liabilities"
+        },
+        {
+          "code": "7025",
+          "name": "Grants subject to future taxation",
+          "description": "Government grants that will be taxable in future periods",
+          "type": "Liabilities",
+          "category": "Liabilities"
+        },
+        {
+          "code": "7030",
+          "name": "Other liabilities",
+          "description": "Miscellaneous debts and obligations not covered elsewhere",
+          "type": "Liabilities",
+          "category": "Liabilities"
+        },
+        {
+          "code": "8000",
+          "name": "Sales VAT",
+          "description": "Danish VAT (moms) collected on sales",
+          "type": "Liabilities",
+          "category": "VAT"
+        },
+        {
+          "code": "8010",
+          "name": "Purchase VAT",
+          "description": "Danish VAT (moms) paid on purchases that can be reclaimed",
+          "type": "Assets",
+          "category": "VAT"
+        },
+        {
+          "code": "8020",
+          "name": "VAT on goods purchased abroad (both EU and third countries)",
+          "description": "VAT due on imported goods from all foreign countries",
+          "type": "Liabilities",
+          "category": "VAT"
+        },
+        {
+          "code": "8030",
+          "name": "VAT on service purchases abroad under reverse charge",
+          "description": "VAT due on foreign services under reverse charge mechanism",
+          "type": "Liabilities",
+          "category": "VAT"
+        },
+        {
+          "code": "8040",
+          "name": "Electricity tax",
+          "description": "Danish tax on electricity consumption",
+          "type": "Liabilities",
+          "category": "VAT"
+        },
+        {
+          "code": "8050",
+          "name": "Other energy taxes",
+          "description": "Danish taxes on gas, oil, and other energy sources",
+          "type": "Liabilities",
+          "category": "VAT"
+        },
+        {
+          "code": "8060",
+          "name": "VAT settlement",
+          "description": "Net VAT position for settlement with Danish tax authorities",
+          "type": "Liabilities",
+          "category": "VAT"
         }
-      },
-      "mixedUseFixedAssets": {
-        "title": "Property, Plant, and Equipment (mixed-use)",
-        "accounts": {
-          "3100": "Opening depreciation base",
-          "3110": "Purchases during the year",
-          "3115": "Improvements during the year",
-          "3120": "Sales during the year",
-          "3130": "Depreciation for the year",
-          "3140": "Gains and losses"
-        }
-      },
-      "leasedPremises": {
-        "title": "Fittings of leased premises (100% business use)",
-        "accounts": {
-          "3200": "Opening depreciation base",
-          "3210": "Purchases during the year",
-          "3220": "Sales during the year",
-          "3230": "Depreciation for the year",
-          "3240": "Gains and losses"
-        }
-      },
-      "deposits": {
-        "title": "Deposits",
-        "accounts": {
-          "3900": "Rent deposit",
-          "3910": "Car-sharing deposit"
-        }
-      },
-      "currentAssets": {
-        "title": "Current assets",
-        "accounts": {
-          "4000": "Cash",
-          "4010": "Bank",
-          "4020": "Prepaid expenses",
-          "4030": "Accounts receivable",
-          "4040": "Inventory",
-          "4050": "Work in progress"
-        }
-      },
-      "equity": {
-        "title": "Equity",
-        "accounts": {
-          "5000": "Equity at beginning of period",
-          "5010": "Profit/loss for the period",
-          "5020": "Owner withdrawals",
-          "5030": "Company car benefit",
-          "5040": "Standard rates",
-          "5050": "Company phone benefit",
-          "5060": "Private amounts",
-          "5065": "Private depreciation",
-          "5070": "Non-deductible operating expenses",
-          "5080": "Private contributions"
-        }
-      },
-      "liabilities": {
-        "title": "Liabilities",
-        "accounts": {
-          "7000": "Loans from banks and mortgage institutions",
-          "7010": "Trade payables",
-          "7020": "Accruals",
-          "7025": "Grants subject to future taxation",
-          "7030": "Other liabilities"
-        }
-      },
-      "vat": {
-        "title": "VAT",
-        "accounts": {
-          "8000": "Sales VAT",
-          "8010": "Purchase VAT",
-          "8020": "VAT on goods purchased abroad (both EU and third countries)",
-          "8030": "VAT on service purchases abroad under reverse charge",
-          "8040": "Electricity tax",
-          "8050": "Other energy taxes",
-          "8060": "VAT settlement"
-        }
-      }
+      ]
     }
   }
 }

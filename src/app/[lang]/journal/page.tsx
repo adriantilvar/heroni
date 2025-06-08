@@ -67,19 +67,14 @@ export default function JournalPage() {
   };
 
   return (
-    <main className="mt-32 flex h-full flex-col items-center font-mono">
-      <div className="flex flex-col items-end xl:w-5xl">
-        <div className="w-full space-y-1">
-          <h2 className="font-semibold">Journal Entry</h2>
-          <p>A journal entry (JE) is a record of a financial transaction.</p>
-        </div>
-
-        <div className="mt-6 flex w-full justify-between">
+    <main className="flex h-full flex-col items-center py-24 font-mono">
+      <div className="flex flex-col items-end xl:w-6xl">
+        <div className="flex w-full justify-between">
           <div className="inline-flex items-center gap-x-2">
             <Input
               type="search"
               placeholder="Search"
-              className="w-full max-w-md rounded-none"
+              className="w-64 rounded-none"
             />
 
             <Button variant="outline" className="rounded-none">

@@ -5,11 +5,11 @@ A platform for counting the beans yourself.
 ## Roadmap
 
 Phase 1:
-- [ ] Create journal entry form (manual transaction)
+- [X] Create journal entry form (manual transaction)
 - [ ] Create journal entry validation
-- [ ] Enable automatic t-account creation (predetermined)
-- [ ] Create page for viewing transactions
-- [ ] Create page for viewing t-accounts
+- [ ] Auto-populate t-account (predetermined)
+- [X] Create page for viewing transactions
+- [X] Create page for viewing t-accounts
 - [ ] Setup database schemas with Drizzle
 - [ ] Add auto-generation of balance sheet
 - [ ] Add auto-generation of income statement
