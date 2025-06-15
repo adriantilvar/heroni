@@ -1,13 +1,14 @@
 import "server-only";
+import type { Prettify } from "@/lib/utils.ts";
 import type { Locale } from "./config.ts";
 
-export type Account = {
+export type Account = Prettify<{
   code: string;
   name: string;
   description: string;
   type: string;
   category: string;
-};
+}>;
 
 type ChartOfAccounts = {
   title: string;

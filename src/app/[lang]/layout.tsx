@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { Navbar } from "@/components/nav-bar";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 const geistSans = Geist({
@@ -43,6 +44,7 @@ export default async function RootLayout({
       >
         <Navbar className="fixed top-0 left-0" />
         {children}
+        <Toaster />
       </body>
     </html>
   );

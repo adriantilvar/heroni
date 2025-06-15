@@ -1,14 +1,6 @@
-"use client"; //TODO: move to server component
 import { Badge } from "@/components/ui/badge.tsx";
 import { Button } from "@/components/ui/button.tsx";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog.tsx";
+
 import { Input } from "@/components/ui/input.tsx";
 import {
   Table,
@@ -18,10 +10,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table.tsx";
-import { Download, Ellipsis, ListFilter, Plus } from "lucide-react";
-import { useState } from "react";
-import JournalEntryForm, { type JournalEntry } from "./entry-form.tsx";
+import { getDictionary } from "@/i18n/get-dictionary";
+import { Download, Ellipsis, ListFilter } from "lucide-react";
+import JournalEntry from "./journal-entry.tsx";
 
+// These should be retrieved from the database
 type Transaction = {
   id: number;
   date: string; // type it more precisely
@@ -47,24 +40,17 @@ const transactions = [
   },
 ] satisfies Transaction[];
 
-export default function JournalPage() {
-  const [formVisible, setFormVisible] = useState(false);
+export default async function JournalPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
 
-  const addTransaction = ({ date, description }: JournalEntry) => {
-    transactions.push({
-      id: transactions.length + 1,
-      date: date.toLocaleString("da-DK", {
-        month: "2-digit",
-        day: "2-digit",
-        year: "numeric",
-      }),
-      description,
-      category: "Miscellaneous",
-      attachments: [],
-    });
-
-    setFormVisible(false);
-  };
+  const { chartOfAccounts } = await getDictionary(lang);
+  const accounts = chartOfAccounts.incomeStatement.accounts.concat(
+    chartOfAccounts.balanceSheet.accounts
+  );
 
   return (
     <main className="flex h-full flex-col items-center py-24 font-mono">
@@ -88,27 +74,7 @@ export default function JournalPage() {
               Export
             </Button>
 
-            <Dialog open={formVisible} onOpenChange={setFormVisible}>
-              <DialogTrigger asChild>
-                <Button className="rounded-none">
-                  <Plus />
-                </Button>
-              </DialogTrigger>
-
-              <DialogContent className="rounded-none xl:max-w-2xl">
-                <DialogHeader>
-                  <DialogTitle>Journal Entry</DialogTitle>
-                  <DialogDescription className="sr-only">
-                    Form for entering transaction into the journal
-                  </DialogDescription>
-                </DialogHeader>
-
-                <JournalEntryForm
-                  className="lg:max-w-2xl"
-                  submitHandler={addTransaction}
-                />
-              </DialogContent>
-            </Dialog>
+            <JournalEntry accounts={accounts} />
           </div>
         </div>
 

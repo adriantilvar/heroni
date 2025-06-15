@@ -12,7 +12,6 @@ const navigationLinks = [
 
 export function Navbar({ className }: { className?: string }) {
   const [lang, currentPath, ...rest] = usePathname().slice(1).split("/");
-  console.log(lang, currentPath);
 
   return (
     <nav

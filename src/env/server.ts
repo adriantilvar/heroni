@@ -2,6 +2,7 @@ import { z } from "zod";
 
 const EnvSchema = z.object({
   NODE_ENV: z.enum(["development", "production"]),
+  DATABASE_URL: z.string().url(),
 });
 
 let env: z.infer<typeof EnvSchema>;
