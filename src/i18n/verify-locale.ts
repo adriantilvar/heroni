@@ -1,8 +1,8 @@
 import "server-only";
-import type { NextRequest } from "next/server";
 
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
+import type { NextRequest } from "next/server";
 import { i18n } from "./config.ts";
 
 const getLocale = (request: NextRequest) => {

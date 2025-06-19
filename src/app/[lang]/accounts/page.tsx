@@ -4,12 +4,14 @@ import { AccountsTable } from "./accounts-table.tsx";
 
 export default async function AccountsPage({
   params,
-}: { params: Promise<{ lang: string }> }) {
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
-  const { chartOfAccounts } = await getDictionary(lang);
-
-  const allAccounts = chartOfAccounts.incomeStatement.accounts.concat(
-    chartOfAccounts.balanceSheet.accounts
+  const accounts = await getDictionary(lang).then(({ chartOfAccounts }) =>
+    chartOfAccounts.incomeStatement.accounts.concat(
+      chartOfAccounts.balanceSheet.accounts
+    )
   );
 
   return (
@@ -22,7 +24,7 @@ export default async function AccountsPage({
             className="w-64 rounded-none"
           />
 
-          <AccountsTable accounts={allAccounts} />
+          <AccountsTable accounts={accounts} />
         </div>
       </div>
     </main>

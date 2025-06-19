@@ -7,7 +7,7 @@ const EnvSchema = z.object({
 let env: z.infer<typeof EnvSchema>;
 
 try {
-  // biome-ignore lint/nursery/noProcessEnv: Only place where we grab it directly
+  // biome-ignore lint: Only place where we grab it directly
   const clientEnv = process.env;
   env = EnvSchema.parse({
     BASE_URL: clientEnv.NEXT_PUBLIC_BASE_URL,

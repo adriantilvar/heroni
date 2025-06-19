@@ -1,7 +1,7 @@
 "use client";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 import { Button } from "./ui/button.tsx";
 
 const navigationLinks = [
@@ -11,7 +11,7 @@ const navigationLinks = [
 ];
 
 export function Navbar({ className }: { className?: string }) {
-  const [lang, currentPath, ...rest] = usePathname().slice(1).split("/");
+  const [lang, currentPath, ..._rest] = usePathname().slice(1).split("/");
 
   return (
     <nav

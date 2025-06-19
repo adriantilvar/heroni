@@ -1,7 +1,7 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.0.0-beta.6/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-  "files": { "ignoreUnknown": false, "ignore": ["node_modules"] },
+  "files": { "ignoreUnknown": false, "includes": ["**", "!**/node_modules"] },
   "formatter": {
     "enabled": true,
     "useEditorconfig": true,
@@ -13,7 +13,7 @@
     "attributePosition": "auto",
     "bracketSpacing": true
   },
-  "organizeImports": { "enabled": true },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -21,7 +21,6 @@
       "correctness": {
         "useImportExtensions": {
           "level": "error",
-          "fix": "safe",
           "options": {}
         },
         "noUnusedImports": "error",
@@ -30,7 +29,6 @@
         }
       },
       "nursery": {
-        "noProcessEnv": "error",
         "useSortedClasses": {
           "level": "info",
           "fix": "safe",
@@ -46,7 +44,18 @@
             "requireAscii": true,
             "filenameCases": ["kebab-case"]
           }
-        }
+        },
+        "noParameterAssign": "error",
+        "useAsConstAssertion": "error",
+        "useDefaultParameterLast": "error",
+        "useEnumInitializers": "error",
+        "useSelfClosingElements": "error",
+        "useSingleVarDeclarator": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useNumberNamespace": "error",
+        "noInferrableTypes": "error",
+        "noUselessElse": "error",
+        "noProcessEnv": "error"
       }
     }
   },

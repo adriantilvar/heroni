@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { Navbar } from "@/components/nav-bar";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
+import { Providers } from "./providers.tsx";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,7 +44,7 @@ export default async function RootLayout({
         )}
       >
         <Navbar className="fixed top-0 left-0" />
-        {children}
+        <Providers>{children}</Providers>
         <Toaster />
       </body>
     </html>

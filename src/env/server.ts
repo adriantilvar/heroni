@@ -5,11 +5,11 @@ const EnvSchema = z.object({
   DATABASE_URL: z.string().url(),
 });
 
-let env: z.infer<typeof EnvSchema>;
+let serverEnv: z.infer<typeof EnvSchema>;
 
 try {
-  // biome-ignore lint/nursery/noProcessEnv: Only place where we grab it directly
-  env = EnvSchema.parse(process.env);
+  // biome-ignore lint: Only place where we grab it directly
+  serverEnv = EnvSchema.parse(process.env);
 } catch (e) {
   const error = e as z.ZodError;
 
@@ -18,4 +18,4 @@ try {
   process.exit(1);
 }
 
-export default env;
+export default serverEnv;

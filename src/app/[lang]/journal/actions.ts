@@ -1,6 +1,10 @@
 "use server";
 
-import { type JournalInsertion, insertIntoJournal } from "@/dal/db-operations";
+import {
+  insertIntoJournal,
+  type JournalInsertion,
+  selectJournal,
+} from "@/dal/db-operations";
 import { type Prettify, unpackQueryError } from "@/lib/utils";
 
 export const insertJournalEntry = async (data: Prettify<JournalInsertion>) => {
@@ -15,4 +19,18 @@ export const insertJournalEntry = async (data: Prettify<JournalInsertion>) => {
   }
 
   return { success: true };
+};
+
+export const getJournalEntries = async () => {
+  const [error, data] = await selectJournal();
+
+  if (error) {
+    console.error(error);
+
+    return {
+      success: false,
+    } as const;
+  }
+
+  return { success: true, data } as const;
 };

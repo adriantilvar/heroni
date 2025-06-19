@@ -1,5 +1,5 @@
 {
-  "id": "21d4e576-b81f-4ac8-b670-892fb5347b1d",
+  "id": "afe5d5ae-79b4-47bc-9fcf-1a9dc8014982",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -23,6 +23,18 @@
         },
         "description": {
           "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "category": {
+          "name": "category",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "attachments": {
+          "name": "attachments",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -51,25 +63,25 @@
           "name": "code",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "name": {
           "name": "name",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "debit": {
           "name": "debit",
           "type": "numeric",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "credit": {
           "name": "credit",
           "type": "numeric",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "journal_entry": {
           "name": "journal_entry",
@@ -84,13 +96,9 @@
           "name": "sub_ledger_journal_entry_journal_id_fk",
           "tableFrom": "sub_ledger",
           "tableTo": "journal",
-          "columnsFrom": [
-            "journal_entry"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
+          "columnsFrom": ["journal_entry"],
+          "columnsTo": ["id"],
+          "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },

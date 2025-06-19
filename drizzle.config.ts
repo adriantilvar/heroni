@@ -1,5 +1,5 @@
-import env from "@/env/server";
 import { defineConfig } from "drizzle-kit";
+import serverEnv from "@/env/server";
 
 export default defineConfig({
   schema: "./src/db/schemas/index.ts",
@@ -7,7 +7,7 @@ export default defineConfig({
   dialect: "postgresql",
   casing: "snake_case",
   dbCredentials: {
-    url: env.DATABASE_URL,
+    url: serverEnv.DATABASE_URL,
   },
   strict: true,
 });

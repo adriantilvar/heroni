@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import {
   Table,
   TableBody,
@@ -9,7 +9,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import type { Account } from "@/i18n/get-dictionary";
-import { useState } from "react";
 import AccountView from "./account-view.tsx";
 
 export function AccountsTable({ accounts }: { accounts: Account[] }) {

@@ -1,4 +1,10 @@
 "use client";
+import { Plus, X } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { use, useState } from "react";
+import { toast } from "sonner";
+import { Temporal } from "temporal-polyfill";
+import z from "zod/v4";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,12 +17,8 @@ import {
 import { useAppForm } from "@/components/ui/form";
 import type { Account } from "@/i18n/get-dictionary.ts";
 import { cn } from "@/lib/utils";
-import { Plus, X } from "lucide-react";
-import * as React from "react";
-import { toast } from "sonner";
-import { Temporal } from "temporal-polyfill";
-import z from "zod/v4";
 import { insertJournalEntry } from "./actions.ts";
+import { OptimisticContext } from "./context.tsx";
 
 const JournalEntrySchema = z.object({
   date: z.iso.date(),
@@ -38,7 +40,9 @@ export default function JournalEntry({
   className?: string;
   accounts: Account[];
 }) {
-  const [formVisible, setFormVisible] = React.useState(false);
+  const router = useRouter();
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const { setIsPending } = use(OptimisticContext);
 
   const form = useAppForm({
     defaultValues: {
@@ -53,6 +57,10 @@ export default function JournalEntry({
       onSubmit: JournalEntrySchema,
     },
     onSubmit: async ({ value }) => {
+      setIsFormVisible(false);
+      form.reset();
+
+      setIsPending(true);
       const { success } = await insertJournalEntry({
         info: {
           createdAt: value.date,
@@ -60,18 +68,16 @@ export default function JournalEntry({
         },
         accounts: value.accounts,
       });
+      setIsPending(false);
 
       if (!success) {
         toast("Oops an error has occured");
-      }
-
-      setFormVisible(false);
-      form.reset();
+      } else router.refresh();
     },
   });
 
   return (
-    <Dialog open={formVisible} onOpenChange={setFormVisible}>
+    <Dialog open={isFormVisible} onOpenChange={setIsFormVisible}>
       <DialogTrigger asChild>
         <Button className="rounded-none">
           <Plus />
@@ -131,26 +137,38 @@ export default function JournalEntry({
                     // biome-ignore lint/suspicious/noArrayIndexKey: Recommended key usage
                     <div className="relative grid grid-cols-5" key={i}>
                       <form.AppField name={`accounts[${i}].name`}>
-                        {(field) => (
-                          <field.Combo
-                            className="col-span-3"
-                            placeholder="Select account"
-                          >
-                            <field.ComboEmpty>
-                              No account matching
-                            </field.ComboEmpty>
-                            {accounts.map((account) => (
-                              <field.ComboItem
-                                key={`${account.code}-${account.name}`}
-                              >
-                                <span className="font-medium">
-                                  {account.code}
-                                </span>{" "}
-                                <span>{account.name}</span>
-                              </field.ComboItem>
-                            ))}
-                          </field.Combo>
-                        )}
+                        {(field) => {
+                          return (
+                            <field.Combo
+                              className="col-span-3"
+                              placeholder="Select account"
+                            >
+                              <field.ComboList>
+                                {accounts.map((account) => (
+                                  <field.ComboItem
+                                    key={`${account.code}-${account.name}`}
+                                    onSelect={(value) => {
+                                      form.replaceFieldValue("accounts", i, {
+                                        ...form.getFieldValue(`accounts[${i}]`),
+                                        code: account.code,
+                                      });
+                                      field.setValue(value);
+                                    }}
+                                  >
+                                    <span className="font-medium">
+                                      {account.code}
+                                    </span>{" "}
+                                    <span>{account.name}</span>
+                                  </field.ComboItem>
+                                ))}
+                              </field.ComboList>
+
+                              <field.ComboEmpty>
+                                No account matching
+                              </field.ComboEmpty>
+                            </field.Combo>
+                          );
+                        }}
                       </form.AppField>
 
                       <form.AppField name={`accounts[${i}].debit`}>

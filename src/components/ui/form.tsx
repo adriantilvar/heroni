@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils.ts";
 import { createFormHook, createFormHookContexts } from "@tanstack/react-form";
 import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils.ts";
 import { Button, type ButtonProps } from "./button.tsx";
 import {
   Command,
@@ -22,6 +22,7 @@ export const { useAppForm } = createFormHook({
     Label,
     Text,
     Combo,
+    ComboList,
     ComboItem,
     ComboEmpty,
   },
@@ -38,7 +39,10 @@ type TextProps = Omit<
 function Label({
   children,
   className,
-}: { children: React.ReactNode; className?: string }) {
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   const field = useFieldContext();
 
   return (
@@ -90,24 +94,42 @@ function Combo({
         {...props}
       />
 
-      <CommandList className="-mx-px invisible absolute inset-x-0 top-9 z-50 border bg-background peer-focus:visible">
-        {children}
-      </CommandList>
+      {children}
     </Command>
+  );
+}
+
+function ComboList({
+  className,
+  ...props
+}: React.ComponentProps<typeof CommandList>) {
+  return (
+    <CommandList
+      className={cn(
+        "-mx-px invisible absolute inset-x-0 top-9 z-50 border bg-background peer-focus:visible",
+        className
+      )}
+      {...props}
+    />
   );
 }
 
 function ComboItem({
   className,
+  onSelect,
   ...props
 }: React.ComponentProps<typeof CommandItem>) {
-  const field = useFieldContext<string>();
+  const field = useFieldContext();
+  const fieldInput = document.getElementsByName(field.name)[0];
 
   return (
     <CommandItem
       className="items-baseline rounded-none"
       onMouseDown={(e) => e.preventDefault()}
-      onSelect={(currentValue) => field.setValue(currentValue)}
+      onSelect={(value) => {
+        onSelect?.(value);
+        fieldInput.blur();
+      }}
       {...props}
     />
   );
