@@ -1,5 +1,6 @@
 CREATE TABLE "journal" (
-	"id" serial PRIMARY KEY NOT NULL,
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"entry_no" serial NOT NULL,
 	"created_at" date DEFAULT now() NOT NULL,
 	"description" text NOT NULL,
 	"category" text,
@@ -12,7 +13,7 @@ CREATE TABLE "sub_ledger" (
 	"name" text NOT NULL,
 	"debit" numeric NOT NULL,
 	"credit" numeric NOT NULL,
-	"journal_entry" serial NOT NULL
+	"journal_entry" uuid NOT NULL
 );
 --> statement-breakpoint
 ALTER TABLE "sub_ledger" ADD CONSTRAINT "sub_ledger_journal_entry_journal_id_fk" FOREIGN KEY ("journal_entry") REFERENCES "public"."journal"("id") ON DELETE cascade ON UPDATE no action;

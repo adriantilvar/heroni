@@ -105,6 +105,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.1.6
         version: 19.1.6(@types/react@19.1.6)
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
       drizzle-kit:
         specifier: ^0.31.1
         version: 0.31.1
@@ -1195,6 +1198,10 @@ packages:
 
   devalue@5.1.1:
     resolution: {integrity: sha512-maua5KUiapvEwiEAe+XnlZ3Rh0GD+qI1J/nb9vrJc3muPXvcF/8gXYTWF76+5DAqHyDUtOIImEuo0YKE9mshVw==}
+
+  dotenv@16.5.0:
+    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+    engines: {node: '>=12'}
 
   drizzle-kit@0.31.1:
     resolution: {integrity: sha512-PUjYKWtzOzPtdtQlTHQG3qfv4Y0XT8+Eas6UbxCmxTj7qgMf+39dDujf1BP1I+qqZtw9uzwTh8jYtkMuCq+B0Q==}
@@ -2447,6 +2454,8 @@ snapshots:
   detect-node-es@1.1.0: {}
 
   devalue@5.1.1: {}
+
+  dotenv@16.5.0: {}
 
   drizzle-kit@0.31.1:
     dependencies:

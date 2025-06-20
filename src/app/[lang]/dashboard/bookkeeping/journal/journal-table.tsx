@@ -53,7 +53,7 @@ export default function JournalTable({
       <TableBody>
         {entries.map((entry) => (
           <TableRow key={entry.id}>
-            <TableCell className="pl-4">{entry.id}</TableCell>
+            <TableCell className="pl-4">{entry.entryNo}</TableCell>
             <TableCell>
               {Temporal.PlainDate.from(entry.createdAt).toLocaleString(
                 "da-DK",

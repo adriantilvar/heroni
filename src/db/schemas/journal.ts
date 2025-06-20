@@ -1,7 +1,8 @@
-import { date, pgTable, serial, text } from "drizzle-orm/pg-core";
+import { date, pgTable, serial, text, uuid } from "drizzle-orm/pg-core";
 
 export const journal = pgTable("journal", {
-  id: serial().primaryKey(),
+  id: uuid().defaultRandom().primaryKey(),
+  entryNo: serial(),
   createdAt: date({ mode: "string" }).notNull().defaultNow(),
   description: text().notNull(),
   category: text(),

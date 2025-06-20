@@ -1,5 +1,5 @@
 {
-  "id": "afe5d5ae-79b4-47bc-9fcf-1a9dc8014982",
+  "id": "0ed52fb6-a9a6-44da-bd05-13d01f768e8f",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -10,8 +10,15 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "serial",
+          "type": "uuid",
           "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "entry_no": {
+          "name": "entry_no",
+          "type": "serial",
+          "primaryKey": false,
           "notNull": true
         },
         "created_at": {
@@ -85,7 +92,7 @@
         },
         "journal_entry": {
           "name": "journal_entry",
-          "type": "serial",
+          "type": "uuid",
           "primaryKey": false,
           "notNull": true
         }
@@ -96,8 +103,12 @@
           "name": "sub_ledger_journal_entry_journal_id_fk",
           "tableFrom": "sub_ledger",
           "tableTo": "journal",
-          "columnsFrom": ["journal_entry"],
-          "columnsTo": ["id"],
+          "columnsFrom": [
+            "journal_entry"
+          ],
+          "columnsTo": [
+            "id"
+          ],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }

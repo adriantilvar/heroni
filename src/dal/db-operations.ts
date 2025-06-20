@@ -15,7 +15,7 @@ import { safeTry } from "@/lib/utils";
 
 export type JournalInsertion = Prettify<{
   info: JournalEntryInsert;
-  accounts: SubLedgerEntryInsert[];
+  accounts: Omit<SubLedgerEntryInsert, "journalEntry">[];
 }>;
 
 export const insertIntoJournal = async ({ info, accounts }: JournalInsertion) =>
@@ -29,9 +29,13 @@ export const insertIntoJournal = async ({ info, accounts }: JournalInsertion) =>
 
       if (!journalEntry) tx.rollback();
 
-      await tx
+      const { subLedgerEntry } = await tx
         .insert(subLedger)
-        .values(accounts.map((account) => ({ ...account, journalEntry })));
+        .values(accounts.map((account) => ({ ...account, journalEntry })))
+        .returning({ subLedgerEntry: subLedger.id })
+        .then((collection) => collection[0]);
+
+      if (!subLedgerEntry) tx.rollback();
     })
   );
 

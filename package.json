@@ -2,6 +2,7 @@
   "name": "next-starter",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -9,6 +10,7 @@
     "lint": "biome check ./src --write --unsafe",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "seed:journal": "node -r dotenv/config ./src/scripts/seed-journal-entries.ts",
     "prepare": "husky"
   },
   "dependencies": {
@@ -46,6 +48,7 @@
     "@types/node": "^20.19.0",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
+    "dotenv": "^16.5.0",
     "drizzle-kit": "^0.31.1",
     "husky": "^9.1.7",
     "tailwindcss": "^4.1.8",

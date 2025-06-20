@@ -1,4 +1,4 @@
-import { numeric, pgTable, serial, text, uuid } from "drizzle-orm/pg-core";
+import { numeric, pgTable, text, uuid } from "drizzle-orm/pg-core";
 import { journal } from "./journal.ts";
 
 export const subLedger = pgTable("sub_ledger", {
@@ -7,7 +7,7 @@ export const subLedger = pgTable("sub_ledger", {
   name: text().notNull(),
   debit: numeric({ scale: 2 }).notNull(),
   credit: numeric({ scale: 2 }).notNull(),
-  journalEntry: serial()
+  journalEntry: uuid()
     .notNull()
     .references(() => journal.id, { onDelete: "cascade" }),
 });
