@@ -9,9 +9,16 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import type { Account } from "@/i18n/get-dictionary";
+import { cn } from "@/lib/utils.ts";
 import AccountView from "./account-view.tsx";
 
-export function AccountsTable({ accounts }: { accounts: Account[] }) {
+export function AccountsTable({
+  className,
+  accounts,
+}: {
+  className?: string;
+  accounts: Account[];
+}) {
   const [isShowingAccount, setIsShowingAccount] = useState(false);
   const [selectedAccount, setSelectedAccount] = useState<Account | undefined>();
 
@@ -24,8 +31,13 @@ export function AccountsTable({ accounts }: { accounts: Account[] }) {
 
   return (
     <>
-      <Table className="mt-4 border">
-        <TableHeader>
+      <Table
+        className={cn(
+          "relative mb-4 border-separate border-spacing-0 overflow-scroll pr-4",
+          className
+        )}
+      >
+        <TableHeader className="sticky top-0 bg-red-100">
           <TableRow className="bg-zinc-100 *:font-semibold hover:bg-zinc-100">
             <TableHead className="pl-4">Code</TableHead>
             <TableHead>Description</TableHead>
@@ -37,7 +49,6 @@ export function AccountsTable({ accounts }: { accounts: Account[] }) {
           {accounts.map((account) => (
             <TableRow
               key={account.code}
-              className="relative"
               onClick={() => accountRowHandler(account)}
             >
               <TableCell className="pl-4 font-semibold">

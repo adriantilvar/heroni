@@ -15,18 +15,16 @@ export default async function AccountsPage({
   );
 
   return (
-    <main className="flex h-full justify-center overflow-scroll py-24 font-mono">
-      <div className="flex h-fit flex-col items-start xl:w-6xl">
-        <div className="w-full">
-          <Input
-            type="search"
-            placeholder="Search"
-            className="w-64 rounded-none"
-          />
-
-          <AccountsTable accounts={accounts} />
-        </div>
+    <div className="flex w-full flex-col gap-4 overflow-hidden pr-4">
+      <div>
+        <Input
+          type="search"
+          placeholder="Search"
+          className="w-64 rounded-none"
+        />
       </div>
-    </main>
+
+      <AccountsTable className="mb-4 flex-1" accounts={accounts} />
+    </div>
   );
 }

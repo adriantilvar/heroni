@@ -1,5 +1,5 @@
 import "server-only";
-import type { Prettify } from "@/lib/utils.ts";
+import type { Prettify } from "@/lib/types.ts";
 import type { Locale } from "./config.ts";
 
 export type Account = Prettify<{

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
-import { Navbar } from "@/components/nav-bar";
-import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
-import { Providers } from "./providers.tsx";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,9 +40,7 @@ export default async function RootLayout({
           "h-screen overflow-hidden antialiased"
         )}
       >
-        <Navbar className="fixed top-0 left-0" />
-        <Providers>{children}</Providers>
-        <Toaster />
+        {children}
       </body>
     </html>
   );

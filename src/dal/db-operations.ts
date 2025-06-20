@@ -10,7 +10,8 @@ import {
   type SubLedgerEntrySelect,
   subLedger,
 } from "@/db/schemas/sub-ledger";
-import { type Prettify, type QueryError, safeTry } from "@/lib/utils";
+import type { Prettify, QueryError } from "@/lib/types";
+import { safeTry } from "@/lib/utils";
 
 export type JournalInsertion = Prettify<{
   info: JournalEntryInsert;

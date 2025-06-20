@@ -9,8 +9,8 @@ export default async function Home({ params }: { params: HomeParams }) {
   const { landing } = await getDictionary(lang);
 
   return (
-    <main className="mx-auto mt-[20%] size-fit bg-orange-100 p-2 font-mono text-orange-900 text-xl">
+    <div className="mx-auto mt-[20%] size-fit bg-orange-100 p-2 font-mono text-orange-900 text-xl">
       🚧 {landing.hello}👷🏼‍♂️ 🚧
-    </main>
+    </div>
   );
 }

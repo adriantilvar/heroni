@@ -5,7 +5,8 @@ import {
   type JournalInsertion,
   selectJournal,
 } from "@/dal/db-operations";
-import { type Prettify, unpackQueryError } from "@/lib/utils";
+import type { Prettify } from "@/lib/types";
+import { unpackQueryError } from "@/lib/utils";
 
 export const insertJournalEntry = async (data: Prettify<JournalInsertion>) => {
   const [error] = await insertIntoJournal(data);
