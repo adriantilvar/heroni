@@ -36,7 +36,7 @@ export default async function JournalPage({
   return (
     <OptimisticProvider>
       <div className="flex h-full flex-col xl:w-6xl">
-        <div className="flex justify-between">
+        <div className="flex justify-between px-6">
           <div className="inline-flex items-center gap-x-2">
             <Input
               type="search"
@@ -59,7 +59,10 @@ export default async function JournalPage({
           </div>
         </div>
 
-        <JournalTable className="mt-4 flex-1" entries={journalQuery.data} />
+        <JournalTable
+          className="mt-4 flex-1 px-6 pb-8"
+          entries={journalQuery.data}
+        />
       </div>
     </OptimisticProvider>
   );

@@ -16,6 +16,7 @@ import type { JournalEntrySelect } from "@/db/schemas/journal";
 import { cn } from "@/lib/utils";
 import { OptimisticContext } from "./context.tsx";
 
+// TODO: Replace table scroll with pagination
 export default function JournalTable({
   className,
   entries,
@@ -27,7 +28,7 @@ export default function JournalTable({
 
   if (!entries.length && !isPending)
     return (
-      <div className="flex h-full items-center justify-center ">
+      <div className="flex h-full items-center justify-center">
         <div className="flex flex-col gap-1 text-center text-foreground xl:max-w-xs">
           <h2>No entries</h2>
           <p className="text-muted-foreground">
@@ -38,63 +39,65 @@ export default function JournalTable({
     );
 
   return (
-    <Table className={cn("border", className)}>
-      <TableHeader>
-        <TableRow className="bg-zinc-100 *:font-semibold hover:bg-zinc-100">
-          <TableHead className="pl-4">#</TableHead>
-          <TableHead>Date</TableHead>
-          <TableHead>Description</TableHead>
-          <TableHead>Category</TableHead>
-          <TableHead>Attachements</TableHead>
-          <TableHead className="w-20">Action</TableHead>
-        </TableRow>
-      </TableHeader>
+    <div className={cn("relative h-full overflow-scroll", className)}>
+      <Table className="border">
+        <TableHeader className="sticky top-0">
+          <TableRow className="sticky top-0 bg-zinc-100 *:font-semibold hover:bg-zinc-100">
+            <TableHead className="pl-4">#</TableHead>
+            <TableHead>Date</TableHead>
+            <TableHead>Description</TableHead>
+            <TableHead>Category</TableHead>
+            <TableHead>Attachements</TableHead>
+            <TableHead className="w-20">Action</TableHead>
+          </TableRow>
+        </TableHeader>
 
-      <TableBody>
-        {entries.map((entry) => (
-          <TableRow key={entry.id}>
-            <TableCell className="pl-4">{entry.entryNo}</TableCell>
-            <TableCell>
-              {Temporal.PlainDate.from(entry.createdAt).toLocaleString(
-                "da-DK",
-                {
-                  day: "2-digit",
-                  month: "2-digit",
-                  year: "numeric",
-                }
-              )}
-            </TableCell>
-            <TableCell>{entry.description}</TableCell>
-            <TableCell>
-              {entry.category ? (
-                <Badge variant="secondary">{entry.category}</Badge>
-              ) : (
-                <span>-</span>
-              )}
-            </TableCell>
-            <TableCell>{entry.attachments}</TableCell>
-            <TableCell className="flex justify-center">
-              <Button variant="ghost" size="icon" className="rounded-none">
-                <Ellipsis />
-              </Button>
-            </TableCell>
-          </TableRow>
-        ))}
-        {isPending && (
-          <TableRow>
-            <TableCell>
-              <div className="h-4 w-[2ch] animate-pulse rounded-lg bg-accent pl-4" />
-            </TableCell>
-            <TableCell>
-              <div className="h-4 w-[10ch] animate-pulse rounded-lg bg-accent" />
-            </TableCell>
-            <TableCell>-</TableCell>
-            <TableCell>-</TableCell>
-            <TableCell>-</TableCell>
-            <TableCell>-</TableCell>
-          </TableRow>
-        )}
-      </TableBody>
-    </Table>
+        <TableBody>
+          {entries.map((entry) => (
+            <TableRow key={entry.id}>
+              <TableCell className="pl-4">{entry.entryNo}</TableCell>
+              <TableCell>
+                {Temporal.PlainDate.from(entry.createdAt).toLocaleString(
+                  "da-DK",
+                  {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                  }
+                )}
+              </TableCell>
+              <TableCell>{entry.description}</TableCell>
+              <TableCell>
+                {entry.category ? (
+                  <Badge variant="secondary">{entry.category}</Badge>
+                ) : (
+                  <span>-</span>
+                )}
+              </TableCell>
+              <TableCell>{entry.attachments}</TableCell>
+              <TableCell className="flex justify-center">
+                <Button variant="ghost" size="icon" className="rounded-none">
+                  <Ellipsis />
+                </Button>
+              </TableCell>
+            </TableRow>
+          ))}
+          {isPending && (
+            <TableRow>
+              <TableCell>
+                <div className="h-4 w-[2ch] animate-pulse rounded-lg bg-accent pl-4" />
+              </TableCell>
+              <TableCell>
+                <div className="h-4 w-[10ch] animate-pulse rounded-lg bg-accent" />
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    </div>
   );
 }
