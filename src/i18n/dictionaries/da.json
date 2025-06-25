@@ -541,7 +541,6 @@
         }
       ]
     },
-
     "balanceSheet": {
       "title": "Balance",
       "accounts": [
@@ -577,14 +576,14 @@
           "code": "3030",
           "name": "Årets afskrivning",
           "description": "Årets afskrivning",
-          "type": "Expense",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
           "code": "3040",
           "name": "Gevinst og tab",
           "description": "Gevinst og tab",
-          "type": "Income",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
@@ -619,14 +618,14 @@
           "code": "3130",
           "name": "Årets afskrivning",
           "description": "Årets afskrivning",
-          "type": "Expense",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
           "code": "3140",
           "name": "Gevinst og tab",
           "description": "Gevinst og tab",
-          "type": "Income",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
@@ -654,14 +653,14 @@
           "code": "3230",
           "name": "Årets afskrivning",
           "description": "Årets afskrivning",
-          "type": "Expense",
+          "type": "Non-Current Asset",
           "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
         },
         {
           "code": "3240",
           "name": "Gevinst/Tab",
           "description": "Gevinst/Tab",
-          "type": "Income",
+          "type": "Non-Current Asset",
           "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
         },
         {

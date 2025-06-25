@@ -576,14 +576,14 @@
           "code": "3030",
           "name": "Depreciation for the year",
           "description": "Annual depreciation charged on fixed assets",
-          "type": "Expense",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (100% business use)"
         },
         {
           "code": "3040",
           "name": "Gains and losses",
           "description": "Profit or loss from disposal of fixed assets",
-          "type": "Income",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (100% business use)"
         },
         {
@@ -618,14 +618,14 @@
           "code": "3130",
           "name": "Depreciation for the year",
           "description": "Annual depreciation charged on mixed-use assets",
-          "type": "Expense",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (mixed-use)"
         },
         {
           "code": "3140",
           "name": "Gains and losses",
           "description": "Profit or loss from disposal of mixed-use assets",
-          "type": "Income",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (mixed-use)"
         },
         {
@@ -653,14 +653,14 @@
           "code": "3230",
           "name": "Depreciation for the year",
           "description": "Annual depreciation charged on leasehold improvements",
-          "type": "Expense",
+          "type": "Non-Current Asset",
           "category": "Improvements to leaseholds (100% business use)"
         },
         {
           "code": "3240",
           "name": "Gains and losses",
           "description": "Profit or loss from disposal of leasehold improvements",
-          "type": "Income",
+          "type": "Non-Current Asset",
           "category": "Improvements to leaseholds (100% business use)"
         },
         {
