@@ -9,35 +9,35 @@
       "accounts": [
         {
           "code": "1000",
-          "name": "Sales of goods/services including VAT",
+          "name": "Sales of goods and services",
           "description": "Revenue from all sales including Danish VAT (moms)",
           "type": "Revenue",
           "category": "Net Revenue"
         },
         {
           "code": "1010",
-          "name": "Sales of goods within the EU",
+          "name": "Sales of goods abroad (EU)",
           "description": "Revenue from goods sold to other EU member states",
           "type": "Revenue",
           "category": "Net Revenue"
         },
         {
           "code": "1015",
-          "name": "Sales of goods to countries outside the EU",
+          "name": "Sales of goods abroad (non-EU)",
           "description": "Export revenue from goods sold to non-EU countries",
           "type": "Revenue",
           "category": "Net Revenue"
         },
         {
           "code": "1020",
-          "name": "Sales of services within the EU",
+          "name": "Sales of services abroad (EU)",
           "description": "Revenue from services provided to other EU member states",
           "type": "Revenue",
           "category": "Net Revenue"
         },
         {
           "code": "1025",
-          "name": "Sales of services to countries outside the EU",
+          "name": "Sales of services abraod (non-EU)",
           "description": "Revenue from services provided to non-EU countries",
           "type": "Revenue",
           "category": "Net Revenue"
@@ -548,329 +548,329 @@
           "code": "3000",
           "name": "Opening depreciation base",
           "description": "Initial value of fixed assets at the start of the tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (100% business use)"
         },
         {
           "code": "3010",
           "name": "Purchases during the year",
           "description": "Fixed assets acquired during the current tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (100% business use)"
         },
         {
           "code": "3015",
           "name": "Improvements during the year",
           "description": "Capital improvements made to existing fixed assets",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (100% business use)"
         },
         {
           "code": "3020",
           "name": "Sales during the year",
           "description": "Fixed assets disposed of during the current tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (100% business use)"
         },
         {
           "code": "3030",
           "name": "Depreciation for the year",
           "description": "Annual depreciation charged on fixed assets",
-          "type": "Assets",
+          "type": "Expense",
           "category": "Fixed Assets (100% business use)"
         },
         {
           "code": "3040",
           "name": "Gains and losses",
           "description": "Profit or loss from disposal of fixed assets",
-          "type": "Assets",
+          "type": "Income",
           "category": "Fixed Assets (100% business use)"
         },
         {
           "code": "3100",
           "name": "Opening depreciation base",
           "description": "Initial value of mixed-use assets at the start of the tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (mixed-use)"
         },
         {
           "code": "3110",
           "name": "Purchases during the year",
           "description": "Mixed-use assets acquired during the current tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (mixed-use)"
         },
         {
           "code": "3115",
           "name": "Improvements during the year",
           "description": "Capital improvements made to existing mixed-use assets",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (mixed-use)"
         },
         {
           "code": "3120",
           "name": "Sales during the year",
           "description": "Mixed-use assets disposed of during the current tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Fixed Assets (mixed-use)"
         },
         {
           "code": "3130",
           "name": "Depreciation for the year",
           "description": "Annual depreciation charged on mixed-use assets",
-          "type": "Assets",
+          "type": "Expense",
           "category": "Fixed Assets (mixed-use)"
         },
         {
           "code": "3140",
           "name": "Gains and losses",
           "description": "Profit or loss from disposal of mixed-use assets",
-          "type": "Assets",
+          "type": "Income",
           "category": "Fixed Assets (mixed-use)"
         },
         {
           "code": "3200",
           "name": "Opening depreciation base",
           "description": "Initial value of leasehold improvements at the start of the tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Improvements to leaseholds (100% business use)"
         },
         {
           "code": "3210",
           "name": "Purchases during the year",
           "description": "Leasehold improvements made during the current tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Improvements to leaseholds (100% business use)"
         },
         {
           "code": "3220",
           "name": "Sales during the year",
           "description": "Leasehold improvements disposed of during the current tax year",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Improvements to leaseholds (100% business use)"
         },
         {
           "code": "3230",
           "name": "Depreciation for the year",
           "description": "Annual depreciation charged on leasehold improvements",
-          "type": "Assets",
+          "type": "Expense",
           "category": "Improvements to leaseholds (100% business use)"
         },
         {
           "code": "3240",
           "name": "Gains and losses",
           "description": "Profit or loss from disposal of leasehold improvements",
-          "type": "Assets",
+          "type": "Income",
           "category": "Improvements to leaseholds (100% business use)"
         },
         {
           "code": "3900",
           "name": "Rent deposit",
           "description": "Security deposits paid for office or business premises",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Deposits"
         },
         {
           "code": "3910",
           "name": "Car-sharing deposit",
           "description": "Deposits paid for car-sharing services",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Deposits"
         },
         {
           "code": "4000",
           "name": "Cash",
           "description": "Cash on hand in registers and petty cash",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Current assets"
         },
         {
           "code": "4010",
           "name": "Bank",
           "description": "Funds in business checking and savings accounts",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Current assets"
         },
         {
           "code": "4020",
           "name": "Prepaid expenses",
           "description": "Expenses paid in advance for future periods",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Current assets"
         },
         {
           "code": "4030",
           "name": "Accounts receivable",
           "description": "Money owed by customers for goods or services provided",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Current assets"
         },
         {
           "code": "4040",
           "name": "Inventory",
           "description": "Goods held for sale or raw materials for production",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Current assets"
         },
         {
           "code": "4050",
           "name": "Work in progress",
           "description": "Partially completed projects or products",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Current assets"
         },
         {
           "code": "5000",
           "name": "Equity at beginning of period",
           "description": "Owner's equity balance at the start of the tax year",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "5010",
           "name": "Profit/loss for the period",
           "description": "Net income or loss for the current tax year",
-          "type": "Equity",
+          "type": "Retained Earnings",
           "category": "Equity"
         },
         {
           "code": "5020",
           "name": "Owner withdrawals",
           "description": "Money withdrawn by the business owner for personal use",
-          "type": "Dividends",
+          "type": "Drawings",
           "category": "Equity"
         },
         {
           "code": "5030",
           "name": "Company car benefit",
           "description": "Personal use value of company car recorded as equity adjustment",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "5040",
           "name": "Standard rates",
           "description": "Standardized rates used for tax calculations",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "5050",
           "name": "Company phone benefit",
           "description": "Personal use value of company phone recorded as equity adjustment",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "5060",
           "name": "Private amounts",
           "description": "Personal expenses paid through the business",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "5065",
           "name": "Private depreciation",
           "description": "Personal portion of depreciation on mixed-use assets",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "5070",
           "name": "Non-deductible operating expenses",
           "description": "Business expenses that are not tax-deductible",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "5080",
           "name": "Private contributions",
           "description": "Personal funds contributed to the business",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Equity"
         },
         {
           "code": "7000",
           "name": "Loans from banks and mortgage institutions",
           "description": "Outstanding debt to financial institutions",
-          "type": "Liabilities",
+          "type": "Non-Current Liabilities",
           "category": "Liabilities"
         },
         {
           "code": "7010",
           "name": "Trade payables",
           "description": "Money owed to suppliers for goods and services",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Liabilities"
         },
         {
           "code": "7020",
           "name": "Accruals",
           "description": "Expenses incurred but not yet paid",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Liabilities"
         },
         {
           "code": "7025",
           "name": "Grants subject to future taxation",
           "description": "Government grants that will be taxable in future periods",
-          "type": "Liabilities",
+          "type": "Non-Current Liabilities",
           "category": "Liabilities"
         },
         {
           "code": "7030",
           "name": "Other liabilities",
           "description": "Miscellaneous debts and obligations not covered elsewhere",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Liabilities"
         },
         {
           "code": "8000",
           "name": "Sales VAT",
           "description": "Danish VAT (moms) collected on sales",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "VAT"
         },
         {
           "code": "8010",
           "name": "Purchase VAT",
           "description": "Danish VAT (moms) paid on purchases that can be reclaimed",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "VAT"
         },
         {
           "code": "8020",
           "name": "VAT on goods purchased abroad (both EU and third countries)",
           "description": "VAT due on imported goods from all foreign countries",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "VAT"
         },
         {
           "code": "8030",
           "name": "VAT on service purchases abroad under reverse charge",
           "description": "VAT due on foreign services under reverse charge mechanism",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "VAT"
         },
         {
           "code": "8040",
           "name": "Electricity tax",
           "description": "Danish tax on electricity consumption",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "VAT"
         },
         {
           "code": "8050",
           "name": "Other energy taxes",
           "description": "Danish taxes on gas, oil, and other energy sources",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "VAT"
         },
         {
           "code": "8060",
           "name": "VAT settlement",
           "description": "Net VAT position for settlement with Danish tax authorities",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "VAT"
         }
       ]

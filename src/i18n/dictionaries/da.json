@@ -541,6 +541,7 @@
         }
       ]
     },
+
     "balanceSheet": {
       "title": "Balance",
       "accounts": [
@@ -548,329 +549,329 @@
           "code": "3000",
           "name": "Afskrivningsgrundlag primo",
           "description": "Afskrivningsgrundlag primo",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
           "code": "3010",
           "name": "Årets køb",
           "description": "Årets køb",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
           "code": "3015",
           "name": "Årets forbedringer",
           "description": "Årets forbedringer",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
           "code": "3020",
           "name": "Årets salg",
           "description": "Årets salg",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
           "code": "3030",
           "name": "Årets afskrivning",
           "description": "Årets afskrivning",
-          "type": "Assets",
+          "type": "Expense",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
           "code": "3040",
           "name": "Gevinst og tab",
           "description": "Gevinst og tab",
-          "type": "Assets",
+          "type": "Income",
           "category": "Driftsmidler og inventar (100% erhvervsmæssigt)"
         },
         {
           "code": "3100",
           "name": "Afskrivningsgrundlag primo",
           "description": "Afskrivningsgrundlag primo",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
           "code": "3110",
           "name": "Årets køb",
           "description": "Årets køb",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
           "code": "3115",
           "name": "Årets forbedringer",
           "description": "Årets forbedringer",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
           "code": "3120",
           "name": "Årets salg",
           "description": "Årets salg",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
           "code": "3130",
           "name": "Årets afskrivning",
           "description": "Årets afskrivning",
-          "type": "Assets",
+          "type": "Expense",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
           "code": "3140",
           "name": "Gevinst og tab",
           "description": "Gevinst og tab",
-          "type": "Assets",
+          "type": "Income",
           "category": "Driftsmidler og inventar (blandede driftsmidler)"
         },
         {
           "code": "3200",
           "name": "Afskrivningsgrundlag Primo",
           "description": "Afskrivningsgrundlag Primo",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
         },
         {
           "code": "3210",
           "name": "Årets køb",
           "description": "Årets køb",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
         },
         {
           "code": "3220",
           "name": "Årets salg",
           "description": "Årets salg",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
         },
         {
           "code": "3230",
           "name": "Årets afskrivning",
           "description": "Årets afskrivning",
-          "type": "Assets",
+          "type": "Expense",
           "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
         },
         {
           "code": "3240",
           "name": "Gevinst/Tab",
           "description": "Gevinst/Tab",
-          "type": "Assets",
+          "type": "Income",
           "category": "Indretning af lejede lokaler (100% erhvervsmæssigt)"
         },
         {
           "code": "3900",
           "name": "Huslejedepositum",
           "description": "Huslejedepositum",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Deposita"
         },
         {
           "code": "3910",
           "name": "Depositum delebil",
           "description": "Depositum delebil",
-          "type": "Assets",
+          "type": "Non-Current Asset",
           "category": "Deposita"
         },
         {
           "code": "4000",
           "name": "Kasse",
           "description": "Kasse",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Omsætningsaktiver"
         },
         {
           "code": "4010",
           "name": "Bank",
           "description": "Bank",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Omsætningsaktiver"
         },
         {
           "code": "4020",
           "name": "Forudbetalte omkostninger",
           "description": "Forudbetalte omkostninger",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Omsætningsaktiver"
         },
         {
           "code": "4030",
           "name": "Debitorer",
           "description": "Debitorer",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Omsætningsaktiver"
         },
         {
           "code": "4040",
           "name": "Varelager",
           "description": "Varelager",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Omsætningsaktiver"
         },
         {
           "code": "4050",
           "name": "Igangværende arbejder",
           "description": "Igangværende arbejder",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Omsætningsaktiver"
         },
         {
           "code": "5000",
           "name": "Egenkapital primo",
           "description": "Egenkapital primo",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "5010",
           "name": "Årets resultat",
           "description": "Årets resultat",
-          "type": "Equity",
+          "type": "Retained Earnings",
           "category": "Egenkapital"
         },
         {
           "code": "5020",
           "name": "Privat hævet",
           "description": "Privat hævet",
-          "type": "Dividends",
+          "type": "Drawings",
           "category": "Egenkapital"
         },
         {
           "code": "5030",
           "name": "Fri bil",
           "description": "Fri bil",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "5040",
           "name": "Standardsatserne",
           "description": "Standardsatserne",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "5050",
           "name": "Fri telefon m.v.",
           "description": "Fri telefon m.v.",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "5060",
           "name": "Private andele",
           "description": "Private andele",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "5065",
           "name": "Private afskrivninger",
           "description": "Private afskrivninger",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "5070",
           "name": "Driftsudgifter uden fradrag",
           "description": "Driftsudgifter uden fradrag",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "5080",
           "name": "Privat udlæg / indskud",
           "description": "Privat udlæg / indskud",
-          "type": "Equity",
+          "type": "Owner's Equity",
           "category": "Egenkapital"
         },
         {
           "code": "7000",
           "name": "Gæld bank og realkreditinstitut",
           "description": "Gæld bank og realkreditinstitut",
-          "type": "Liabilities",
+          "type": "Non-Current Liabilities",
           "category": "Gæld"
         },
         {
           "code": "7010",
           "name": "Gæld til leverandører af varer og tjenesteydelser",
           "description": "Gæld til leverandører af varer og tjenesteydelser",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Gæld"
         },
         {
           "code": "7020",
           "name": "Periodeafgrænsningsposter",
           "description": "Periodeafgrænsningsposter",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Gæld"
         },
         {
           "code": "7025",
           "name": "Tilskud til senere beskatning",
           "description": "Tilskud til senere beskatning",
-          "type": "Liabilities",
+          "type": "Non-Current Liabilities",
           "category": "Gæld"
         },
         {
           "code": "7030",
           "name": "Anden Gæld",
           "description": "Anden Gæld",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Gæld"
         },
         {
           "code": "8000",
           "name": "Salgsmoms",
           "description": "Salgsmoms",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Moms"
         },
         {
           "code": "8010",
           "name": "Købsmoms",
           "description": "Købsmoms",
-          "type": "Assets",
+          "type": "Current Asset",
           "category": "Moms"
         },
         {
           "code": "8020",
           "name": "Moms af varekøb i udlandet (både EU og tredjelande)",
           "description": "Moms af varekøb i udlandet (både EU og tredjelande)",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Moms"
         },
         {
           "code": "8030",
           "name": "Moms af ydelseskøb i udlandet med omvendt betalingspligt",
           "description": "Moms af ydelseskøb i udlandet med omvendt betalingspligt",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Moms"
         },
         {
           "code": "8040",
           "name": "El- afgift",
           "description": "El- afgift",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Moms"
         },
         {
           "code": "8050",
           "name": "Øvrige energiafgifter",
           "description": "Øvrige energiafgifter",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Moms"
         },
         {
           "code": "8060",
           "name": "Momsafregning",
           "description": "Momsafregning",
-          "type": "Liabilities",
+          "type": "Current Liabilities",
           "category": "Moms"
         }
       ]

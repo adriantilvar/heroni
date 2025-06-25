@@ -1,8 +1,8 @@
 "use server";
-import { selectSubLedger } from "@/dal/db-operations";
+import { selectSubLedgerEntriesByCode } from "@/dal/db-operations";
 
 export const getAccountTransactions = async (code: string) => {
-  const [error, data] = await selectSubLedger(code);
+  const [error, data] = await selectSubLedgerEntriesByCode(code);
 
   if (error) {
     console.error(error);

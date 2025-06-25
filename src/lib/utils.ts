@@ -66,3 +66,13 @@ export const unpackQueryError = ({ query, params, cause }: QueryError) => ({
   message: cause.message,
   code: cause.code,
 });
+
+export const getCurrencyFormatter = (_args?: {
+  locale?: Intl.LocalesArgument;
+  options?: Intl.NumberFormatOptions;
+}) =>
+  new Intl.NumberFormat(_args?.locale ?? "da", {
+    style: "currency",
+    currency: "DKK",
+    ..._args?.options,
+  });

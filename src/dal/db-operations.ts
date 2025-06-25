@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { eq, getTableColumns } from "drizzle-orm";
 import { db } from "@/db";
 import {
   type JournalEntryInsert,
@@ -42,7 +42,23 @@ export const insertIntoJournal = async ({ info, accounts }: JournalInsertion) =>
 export const selectJournal = async () =>
   safeTry<JournalEntrySelect[], QueryError>(db.select().from(journal));
 
-export const selectSubLedger = async (code: string) =>
-  safeTry<SubLedgerEntrySelect[], QueryError>(
-    db.select().from(subLedger).where(eq(subLedger.code, code))
+export const selectSubLedgerEntries = async () =>
+  safeTry<SubLedgerEntrySelect[], QueryError>(db.select().from(subLedger));
+
+export type DetailedSubLedgerEntry = Prettify<
+  SubLedgerEntrySelect & {
+    journalDescription: string;
+  }
+>;
+
+export const selectSubLedgerEntriesByCode = async (code: string) =>
+  safeTry<DetailedSubLedgerEntry[], QueryError>(
+    db
+      .select({
+        ...getTableColumns(subLedger),
+        journalDescription: journal.description,
+      })
+      .from(subLedger)
+      .where(eq(subLedger.code, code))
+      .innerJoin(journal, eq(subLedger.journalEntry, journal.id))
   );
