@@ -1,6 +1,6 @@
-# Beantally
+# Heroni
 
-A platform for counting the beans yourself.
+A platform that makes accounting accessible for small business owners.
 
 ## Roadmap
 
